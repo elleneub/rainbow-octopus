@@ -1,7 +1,8 @@
 import React from 'react'
-import logo from '../logo.svg'
 import '../App.scss'
 import ButtonPrimary from './ButtonPrimary'
+import ButtonSecondary from './ButtonSecondary'
+import Navbar from './Navbar'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -29,37 +30,35 @@ class App extends React.Component {
         return (
             <>
                 <div className="App">
-                    <header className="App-header">
-                        <h1>Hi</h1>
-                        <ButtonPrimary />
+                    <Navbar />
+                    <h1>Helper App</h1>
+                    <ButtonPrimary />
+                    <ButtonSecondary />
 
-                        <h2>General Icons</h2>
-                        <FontAwesomeIcon icon={faEdit} />
-                        <FontAwesomeIcon icon={faBars} />
+                    <h2>General Icons</h2>
+                    <FontAwesomeIcon icon={faEdit} />
+                    <FontAwesomeIcon icon={faBars} />
 
-                        <h2>User Icons</h2>
-                        <FontAwesomeIcon icon={faUserAstronaut} />
-                        <FontAwesomeIcon icon={faUser} />
-                        <FontAwesomeIcon icon={faUserEdit} />
-                        <FontAwesomeIcon icon={faUserSecret} />
+                    <h2>User Icons</h2>
+                    <FontAwesomeIcon icon={faUserAstronaut} />
+                    <FontAwesomeIcon icon={faUser} />
+                    <FontAwesomeIcon icon={faUserEdit} />
+                    <FontAwesomeIcon icon={faUserSecret} />
 
-                        <h2>Donate Icons</h2>
-                        <FontAwesomeIcon icon={faDonate} />
-                        <FontAwesomeIcon icon={faHandHoldingHeart} />
-                        <FontAwesomeIcon icon={faHandHoldingUsd} />
+                    <h2>Donate Icons</h2>
+                    <FontAwesomeIcon icon={faDonate} />
+                    <FontAwesomeIcon icon={faHandHoldingHeart} />
+                    <FontAwesomeIcon icon={faHandHoldingUsd} />
 
-                        <h2>Volunteer Icons</h2>
-                        <FontAwesomeIcon icon={faUsers} />
-                        <FontAwesomeIcon icon={faPeopleCarry} />
+                    <h2>Volunteer Icons</h2>
+                    <FontAwesomeIcon icon={faUsers} />
+                    <FontAwesomeIcon icon={faPeopleCarry} />
 
-                        <h2>Social Media Icons</h2>
-                        <FontAwesomeIcon icon={faTwitter} />
-                        <FontAwesomeIcon icon={faInstagram} />
-                        <FontAwesomeIcon icon={faFacebook} />
-                        <FontAwesomeIcon icon={faGithub} />
-
-                        <img src={logo} className="App-logo" alt="logo" />
-                    </header>
+                    <h2>Social Media Icons</h2>
+                    <FontAwesomeIcon icon={faTwitter} />
+                    <FontAwesomeIcon icon={faInstagram} />
+                    <FontAwesomeIcon icon={faFacebook} />
+                    <FontAwesomeIcon icon={faGithub} />
                 </div>
             </>
         )
