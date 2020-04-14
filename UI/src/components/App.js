@@ -11,10 +11,10 @@ class App extends React.Component {
         return (
             <>
                 <div className="App">
-                        {/* <Navbar /> */}
+                        <Navbar />
                         <h1>Helper App</h1>
                         <ButtonPrimary />
-                        <ButtonSecondary />
+                    <ButtonSecondary />
                 </div>
             </>
         )
