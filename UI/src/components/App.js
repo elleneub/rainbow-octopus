@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 import logo from '../logo.svg'
-import '../App.scss';
-import ButtonPrimary from './ButtonPrimary';
+import '../App.scss'
+import ButtonPrimary from './ButtonPrimary'
 
 class App extends React.Component {
-
     render() {
         return (
             <>
@@ -12,9 +11,8 @@ class App extends React.Component {
                     <header className="App-header">
                         <h1>Hi</h1>
                         <ButtonPrimary />
-                        
+
                         <img src={logo} className="App-logo" alt="logo" />
-                        
                     </header>
                 </div>
             </>
@@ -22,4 +20,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default App
