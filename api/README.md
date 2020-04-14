@@ -7,7 +7,10 @@ Have the following installed in your machine:
  * Git
  * PostgreSQL or we will have an option to run PostgreSQL in the cloud (this option coming soon)
 
-
+ Start in the rainbow-octopus directory
+```
+cd rainbow-octopus
+```
  Install virtualenv if it's not available on your machine already.
 
  ```
@@ -32,7 +35,7 @@ Have the following installed in your machine:
 Now you can run the app locally by running on the command line:
 
 ```
-python3 app.py
+python3 api/server.py
 ```
 
 Coming soon ....
