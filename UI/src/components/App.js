@@ -1,21 +1,30 @@
-import React from 'react';
+import React from 'react'
 import logo from '../logo.svg'
-import '../App.scss';
-import ButtonPrimary from './ButtonPrimary';
+import '../App.scss'
+import ButtonPrimary from './ButtonPrimary'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faInstagram, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faBars, faUser, faUsers, faUserAstronaut, faPeopleCarry, faUserSecret, faEdit, faUserEdit, faDonate, faHandHoldingHeart, faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons'
-
-
-
-
-
-
-
+import {
+    faTwitter,
+    faInstagram,
+    faFacebook,
+    faGithub,
+} from '@fortawesome/free-brands-svg-icons'
+import {
+    faBars,
+    faUser,
+    faUsers,
+    faUserAstronaut,
+    faPeopleCarry,
+    faUserSecret,
+    faEdit,
+    faUserEdit,
+    faDonate,
+    faHandHoldingHeart,
+    faHandHoldingUsd,
+} from '@fortawesome/free-solid-svg-icons'
 
 class App extends React.Component {
-
     render() {
         return (
             <>
@@ -50,7 +59,6 @@ class App extends React.Component {
                         <FontAwesomeIcon icon={faGithub} />
 
                         <img src={logo} className="App-logo" alt="logo" />
-                        
                     </header>
                 </div>
             </>
@@ -58,4 +66,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default App
