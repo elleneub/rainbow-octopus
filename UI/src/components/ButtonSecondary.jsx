@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 
 const ButtonSecondary = () => {
     return (
@@ -6,6 +6,6 @@ const ButtonSecondary = () => {
             <button className="btn btn-secondary px-3">Secondary Button</button>
         </div>
     )
-};
+}
 
-export default ButtonSecondary;
+export default ButtonSecondary
