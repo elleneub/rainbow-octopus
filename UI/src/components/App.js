@@ -1,7 +1,9 @@
 import React from 'react';
-import logo from '../logo.svg'
 import '../App.scss';
 import ButtonPrimary from './ButtonPrimary';
+import ButtonSecondary from './ButtonSecondary';
+import Navbar from './Navbar';
+
 
 class App extends React.Component {
 
@@ -9,13 +11,10 @@ class App extends React.Component {
         return (
             <>
                 <div className="App">
-                    <header className="App-header">
-                        <h1>Hi</h1>
+                        {/* <Navbar /> */}
+                        <h1>Helper App</h1>
                         <ButtonPrimary />
-                        
-                        <img src={logo} className="App-logo" alt="logo" />
-                        
-                    </header>
+                        <ButtonSecondary />
                 </div>
             </>
         )

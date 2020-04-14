@@ -1,3 +1,13 @@
+// $orange: #dd7d6b;
+// $green: #45818d;
+// $grey: grey;
+
+$theme-colors: (
+  primary: #dd7d6b,
+  secondary: #45818d,
+  dark: grey
+);
+
 @import 'bootstrap';
 
 .App {
