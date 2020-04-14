@@ -1,0 +1,35 @@
+$orange: #dd7d6b;
+$green: #45818d;
+
+@mixin btn-theme($btn-color) {
+    background-color: $btn-color;
+    border-color: $btn-color;
+
+    &:hover {
+        background-color: darken(#dd7d6b, 6%);
+    }
+
+    &:disabled {
+        background-color: lighten(#dd7d6b, 6%);
+    }
+}
+
+@mixin btn-theme($btn-color) {
+    background-color: #45818d;
+
+    &:hover {
+        background-color: darken(#45818d, 6%);
+    }
+
+    &:disabled {
+        background-color: lighten(#45818d, 6%);
+    }
+}
+.orange {
+    @include btn-theme($orange);
+}
+
+.green {
+    @include btn-theme($green);
+}
+
