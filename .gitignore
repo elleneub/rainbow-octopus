@@ -1,5 +1,6 @@
 # dependencies
-/api/node_modules
+UI/node_modules
+
 
 env
 __pycache__
@@ -13,6 +14,7 @@ __pycache__
 
 # production
 /build
+UI/build
 
 # misc
 .DS_Store
