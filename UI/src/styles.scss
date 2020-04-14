@@ -15,26 +15,11 @@ code {
     monospace;
 }
 
-
 // ----BUTTONS------
-
-.btn-primary {
-    color: white;
-}
-
 .btn {
     padding: .5em 1em .5em 1em;
     margin: .5em;
-    box-shadow: 0px 0px 5px rgb(175, 175, 176);
+    box-shadow: 0px 0px 4px  rgb(145, 145, 145);
+    color: white;
+    font-weight: 500;
 }
-
-// .btn-disabled {
-//     background-color: $dark;
-//     border-color: $dark;
-//     cursor : not-allowed !important;
-
-//     &:hover {
-//         background-color: $dark;
-//         border-color: $dark;
-//     }
-// }

@@ -60,19 +60,19 @@
 
 $primary:       #dd7d6b !default;
 $secondary:     #45818d !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$success:       #1c4587 !default;
+$info:          #f2c57c !default;
+$warning:       #8b1e3f!default;
+$danger:        #0b343d !default;
+$light:         #d9d9d9 !default;
+$dark:          grey !default;
 
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
+  // "info":       $info,
+  // "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark
