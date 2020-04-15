@@ -63,7 +63,8 @@ class Address(db.Model):
     # api documentation for "smartystreets.com" us-street-api
 
     address_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"), 
+                        nullable=True)
     street_1 = db.Column(db.String(50), nullable=False)
     street_2 = db.Column(db.String(50), nullable=True)
     city =  db.Column(db.String(64), nullable=False)
@@ -132,6 +133,19 @@ class Offer(db.Model):
                    modified_on={self.modified_on}
                    recurring={self.recurring}"""
 
+    @property    
+    def to_dict_for_json(self):
+        json_dict = {}
+        json_dict['offer_id'] = self.offer_id
+        json_dict['offerer_uid'] = self.offerer_uid
+        json_dict['description'] = self.description
+        json_dict['recurring'] = self.recurring
+        json_dict['created_on'] = self.created_on.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['expiration_date'] = self.expiration_date.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['modified_on'] = self.modified_on.strftime('%b %d, %Y %H:%M:%S')
+
+        return json_dict
+
 
 class Offer_Requested(db.Model):
     __tablename__ = "offers_requested"
@@ -172,6 +186,19 @@ class Request(db.Model):
                     created_on={self.created_on}
                     service_needed_at={self.service_needed_at}>"""
 
+    @property    
+    def to_dict_for_json(self):
+        json_dict = {}
+        json_dict['request_id'] = self.request_id
+        json_dict['request_user_id'] = self.request_user_id
+        json_dict['volunteer_user_id'] = self.volunteer_user_id
+        json_dict['notes'] = self.notes
+        json_dict['fulfilled'] = self.fulfilled
+        json_dict['created_on'] = self.created_on.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['modified_on'] = self.modified_on.strftime('%b %d, %Y %H:%M:%S')
+
+        return json_dict
+
 
 class Request_Category(db.Model):
     __tablename__ = "request_categories"
@@ -195,9 +222,6 @@ class Offer_Category(db.Model):
     def __repr__(self):
         return f"""<Offer_Category 
                     offer_category_id={self.offer_category_id}"""
-
-
-
 
 
 ##############################################################################
