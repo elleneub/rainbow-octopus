@@ -1,8 +1,9 @@
 import React from 'react'
-import './Demo.scss'
-import ButtonPrimary from '../components/ButtonPrimary'
-import ButtonSecondary from '../components/ButtonSecondary'
-import ProfileCard from '../components/ProfileCard'
+import ButtonPrimary from 'components/ButtonPrimary'
+import ButtonSecondary from 'components/ButtonSecondary'
+import ProfileCard from 'components/ProfileCard'
+import PostCard from 'components/PostCard'
+import PostDetails from 'components/PostDetails'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -51,6 +52,8 @@ class DemoPage extends React.Component {
                 <ButtonPrimary />
                 <ButtonSecondary />
                 <ProfileCard />
+                <PostCard />
+                <PostDetails />
 
                 <h2>General Icons</h2>
                 <FontAwesomeIcon icon={faEdit} />
