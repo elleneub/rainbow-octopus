@@ -5,12 +5,29 @@ Have the following installed in your machine:
  * Python (we are using version 3.6.9)
  * Pip version 20.0.2 (pip3)
  * Git
- * PostgreSQL or we will have an option to run PostgreSQL in the cloud (this option coming soon)
+ * PostgreSQL
 
- Start in the rainbow-octopus directory
+Start in the rainbow-octopus directory
 ```
 cd rainbow-octopus
 ```
+  Create the volunteers-db PostgreSQL db by running on the command line:
+
+ ```
+createdb volunteers-db
+ ```
+
+Create the tables in the db by running on the command line:
+
+```
+ python3 -i model.py
+```
+Then in python interactive mode run
+```
+Connected to DB.
+>>> db.create_all()
+```
+
  Install virtualenv if it's not available on your machine already.
 
  ```
@@ -38,5 +55,3 @@ Now you can run the app locally by running on the command line:
 python3 api/server.py
 ```
 
-Coming soon ....
-more db instructions
