@@ -20,12 +20,12 @@ class ProfileCard extends React.Component {
                     />
                     <div className="buttons my-3">
                         <button className="send-msg btn">
-                            Send Jane a Message
+                            Send Stephanie a Message
                         </button>
                     </div>
                 </div>
                 <div className="col-6">
-                    <h4 className="my-3">Jane Burnside</h4>
+                    <h4 className="my-3">Stephanie Burnside</h4>
                     <h6 className="my-3">Minneapolis, MN</h6>
                     <div className="social-icons">
                         <FontAwesomeIcon
@@ -61,14 +61,14 @@ class ProfileCard extends React.Component {
                 <div className="col">
                     <hr></hr>
                     <div className="skills">
-                        <h5 className="text-center m-3">Skills & Services I Offer</h5>
+                        <h5 className="text-center m-3">I Can Help With:</h5>
                         <ul>
-                            <li>sewing</li>
-                            <li>groceries</li>
-                            <li>cooking</li>
-                            <li>sewing</li>
-                            <li>groceries</li>
-                            <li>cooking</li>
+                            <li>errands</li>
+                            <li>transportation</li>
+                            <li>light housework</li>
+                            <li>light yardwork</li>
+                            <li>heavy housework</li>
+                            <li>heavy yardwork</li>
                         </ul>
                     </div>
                 </div>
