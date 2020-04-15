@@ -1,11 +1,9 @@
 import React from 'react'
-import '../App.scss'
-import ButtonPrimary from './ButtonPrimary'
-import ButtonSecondary from './ButtonSecondary'
-import Navbar from './Navbar'
-import ProfileCard from './ProfileCard'
-import PostCard from './PostCard'
-import PostDetails from './PostDetails'
+import ButtonPrimary from 'components/ButtonPrimary'
+import ButtonSecondary from 'components/ButtonSecondary'
+import ProfileCard from 'components/ProfileCard'
+import PostCard from 'components/PostCard'
+import PostDetails from 'components/PostDetails'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
