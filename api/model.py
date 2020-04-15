@@ -122,6 +122,7 @@ class Offer(db.Model):
     modified_on = db.Column(db.DateTime, nullable=False)
     recurring = db.Column(db.Boolean, nullable=False, default=False)
     description = db.Column(db.String(1000), nullable=True)
+    active = db.Column(db.Boolean, nullable=False, default=True)
 
     offers_requested = db.relationship("Offer_Requested", 
                                         backref=db.backref("offers"))
@@ -141,7 +142,8 @@ class Offer(db.Model):
         json_dict['description'] = self.description
         json_dict['recurring'] = self.recurring
         json_dict['created_on'] = self.created_on.strftime('%b %d, %Y %H:%M:%S')
-        json_dict['expiration_date'] = self.expiration_date.strftime('%b %d, %Y %H:%M:%S')
+        if self.expiration_date is not None:
+            json_dict['expiration_date'] = self.expiration_date.strftime('%b %d, %Y %H:%M:%S')
         json_dict['modified_on'] = self.modified_on.strftime('%b %d, %Y %H:%M:%S')
 
         return json_dict
@@ -174,7 +176,8 @@ class Request(db.Model):
     active = db.Column(db.Boolean, nullable=False, default=True)
     created_on = db.Column(db.DateTime, nullable=False)
     modified_on = db.Column(db.DateTime, nullable=False)
-    service_needed_at = db.Column(db.Integer, db.ForeignKey("addresses.address_id"))
+    service_needed_at = db.Column(db.Integer, db.ForeignKey("addresses.address_id"),
+                                  nullable=True)
 
     def __repr__(self):
         return f"""<Request request_id={self.request_id}
@@ -190,7 +193,7 @@ class Request(db.Model):
     def to_dict_for_json(self):
         json_dict = {}
         json_dict['request_id'] = self.request_id
-        json_dict['request_user_id'] = self.request_user_id
+        json_dict['requester_user_id'] = self.requester_user_id
         json_dict['volunteer_user_id'] = self.volunteer_user_id
         json_dict['notes'] = self.notes
         json_dict['fulfilled'] = self.fulfilled
