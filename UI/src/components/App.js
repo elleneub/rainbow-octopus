@@ -3,6 +3,7 @@ import '../App.scss'
 import ButtonPrimary from './ButtonPrimary'
 import ButtonSecondary from './ButtonSecondary'
 import Navbar from './Navbar'
+import ProfileCard from './ProfileCard'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -51,6 +52,7 @@ class App extends React.Component {
                     <h1>Helper App</h1>
                     <ButtonPrimary />
                     <ButtonSecondary />
+                    <ProfileCard />
 
                     <h2>General Icons</h2>
                     <FontAwesomeIcon icon={faEdit} />
