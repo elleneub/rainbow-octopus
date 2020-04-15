@@ -7,23 +7,27 @@ import FindHelpPage from './pages/FindHelp.jsx'
 import OfferHelpPage from './pages/OfferHelp.jsx'
 import MessagesPage from './pages/Messages.jsx'
 import CommunityGuidelinesPage from './pages/CommunityGuidelines.jsx'
+import Navbar from './components/Navbar.jsx'
 
 class App extends React.Component {
     render() {
         return (
-            <Switch>
-                <Route exact path="/offerHelp" component={OfferHelpPage} />
-                <Route exact path="/findHelp" component={FindHelpPage} />
-                <Route exact path="/messages" component={MessagesPage} />
-                <Route exact path="/account" component={MyAccountPage} />
-                <Route
-                    exact
-                    path="/guidelines"
-                    component={CommunityGuidelinesPage}
-                />
-                <Route exact path="/demo" component={DemoPage} />
-                <Route exact path="" component={HomePage} />
-            </Switch>
+            <div>
+                <Navbar />
+                <Switch>
+                    <Route exact path="/offerHelp" component={OfferHelpPage} />
+                    <Route exact path="/findHelp" component={FindHelpPage} />
+                    <Route exact path="/messages" component={MessagesPage} />
+                    <Route exact path="/account" component={MyAccountPage} />
+                    <Route
+                        exact
+                        path="/guidelines"
+                        component={CommunityGuidelinesPage}
+                    />
+                    <Route exact path="/demo" component={DemoPage} />
+                    <Route exact path="" component={HomePage} />
+                </Switch>
+            </div>
         )
     }
 }

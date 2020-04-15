@@ -39,12 +39,3 @@ def connect_to_db(app):
     db.init_app(app)
 
 connect_to_db(app)
-
-# test route
-@app.route('/')
-def index():
-        
-    return f"hello"
-
-if __name__ == "__main__":
-    app.run(port=5000,host="0.0.0.0")

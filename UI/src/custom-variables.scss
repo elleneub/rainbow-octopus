@@ -63,7 +63,7 @@
 
 $primary: #dd7d6b !default;
 $secondary: #45818d !default;
-// $success: $green !default;
+$success: #1c4587 !default;
 // $info: $cyan !default;
 // $warning: $yellow !default;
 // $danger: $red !default;
@@ -73,7 +73,7 @@ $secondary: #45818d !default;
 $theme-colors: (
     'primary': $primary,
     'secondary': $secondary,
-    // 'success': $success,
+    'success': $success,
         // 'info': $info,
         // 'warning': $warning,
         // 'danger': $danger,
