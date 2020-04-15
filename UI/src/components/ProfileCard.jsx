@@ -69,7 +69,7 @@ class ProfileCard extends React.Component {
                             <li>light yardwork</li>
                             <li>heavy housework</li>
                             <li>heavy yardwork</li>
-                        </ul>
+                      </ul>
                     </div>
                 </div>
             </div>
