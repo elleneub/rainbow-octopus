@@ -10,6 +10,17 @@ import {
     faInstagram,
     faFacebook,
     faGithub,
+    faPaypal,
+    faCcAmazonPay,
+    faCcApplePay,
+    faCcPaypal,
+    faCcStripe,
+    faCcMastercard,
+    faCcAmex,
+    faCcVisa,
+    faAmazonPay,
+    faStripe,
+    faStripeS,
 } from '@fortawesome/free-brands-svg-icons'
 import {
     faBars,
@@ -23,6 +34,12 @@ import {
     faDonate,
     faHandHoldingHeart,
     faHandHoldingUsd,
+    faMoneyBill,
+    faMoneyBillWave,
+    faMoneyBillAlt,
+    faMoneyBillWaveAlt,
+    faCoins,
+    faHandshake,
 } from '@fortawesome/free-solid-svg-icons'
 
 class App extends React.Component {
@@ -45,11 +62,28 @@ class App extends React.Component {
                     <FontAwesomeIcon icon={faUserEdit} />
                     <FontAwesomeIcon icon={faUserSecret} />
 
-                    <h2>Donate Icons</h2>
+                    <h2>Donate and Payment Icons</h2>
                     <FontAwesomeIcon icon={faDonate} />
                     <FontAwesomeIcon icon={faHandHoldingHeart} />
                     <FontAwesomeIcon icon={faHandHoldingUsd} />
-
+                    <FontAwesomeIcon icon={faPaypal} />
+                    <FontAwesomeIcon icon={faCcAmazonPay} />
+                    <FontAwesomeIcon icon={faCcApplePay} />
+                    <FontAwesomeIcon icon={faCcPaypal} />
+                    <FontAwesomeIcon icon={faCcStripe} />
+                    <FontAwesomeIcon icon={faCcMastercard} />
+                    <FontAwesomeIcon icon={faCcAmex} />
+                    <FontAwesomeIcon icon={faCcVisa} />
+                    <FontAwesomeIcon icon={faAmazonPay} />
+                    <FontAwesomeIcon icon={faStripe} />
+                    <FontAwesomeIcon icon={faStripeS} />
+                    <FontAwesomeIcon icon={faMoneyBill} />
+                    <FontAwesomeIcon icon={faMoneyBillWave} />
+                    <FontAwesomeIcon icon={faMoneyBillAlt} />
+                    <FontAwesomeIcon icon={faMoneyBillWaveAlt} />
+                    <FontAwesomeIcon icon={faCoins} />
+                    <FontAwesomeIcon icon={faHandshake} />
+            
                     <h2>Volunteer Icons</h2>
                     <FontAwesomeIcon icon={faUsers} />
                     <FontAwesomeIcon icon={faPeopleCarry} />
