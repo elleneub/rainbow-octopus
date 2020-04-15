@@ -5,6 +5,7 @@ import ButtonSecondary from './ButtonSecondary'
 import Navbar from './Navbar'
 import ProfileCard from './ProfileCard'
 import PostCard from './PostCard'
+import PostDetails from './PostDetails'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -55,6 +56,7 @@ class App extends React.Component {
                     <ButtonSecondary />
                     <ProfileCard />
                     <PostCard />
+                    <PostDetails />
 
                     <h2>General Icons</h2>
                     <FontAwesomeIcon icon={faEdit} />
