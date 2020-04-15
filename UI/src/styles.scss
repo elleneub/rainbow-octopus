@@ -108,6 +108,11 @@ hr {
 
 // POST CARDS
 
-.post-card p {
-    font-size: 14px;
+.post-card {
+    min-width: 18rem;
+    max-width: 24rem;
+
+    p {
+        font-size: 14px;
+    }
 }

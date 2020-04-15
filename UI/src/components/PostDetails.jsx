@@ -5,18 +5,24 @@ class PostDetails extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            name: '',
+            title: '',
+            location: '',
+            description: '',
+            notes: '',
+            expiration: '',
+            recurring: false
         }
     }
     render() {
         return (
-            <div className="card bg-light border-light shadow-sm post-card">
-                <div className="card-body">
+            <div className="card bg-light shadow-sm m-3 border-primary">
+                <div className="card-body post-card ">
                     <h5 className="card-title font-weight-bold text-left">
-                        Need groceries pick-up
+                        Helper: {this.state.name}
                     </h5>
                     <p className="card-subtitle mb-2 text-muted text-left">
-                        NE Minneapolis
+                        Location: {this.state.location}
                     </p>
 
                     <div className="row">
