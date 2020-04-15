@@ -67,18 +67,18 @@ $success: #1c4587 !default;
 // $info: $cyan !default;
 // $warning: $yellow !default;
 // $danger: $red !default;
-// $light: $gray-100 !default;
-// $dark: $gray-800 !default;
+$light: #d9d9d9 !default;
+$dark: #0b343d !default;
 
 $theme-colors: (
     'primary': $primary,
     'secondary': $secondary,
     'success': $success,
-        // 'info': $info,
+    // 'info': $info,
         // 'warning': $warning,
         // 'danger': $danger,
-        // 'light': $light,
-        // 'dark': $dark,,,,
+    'light': $light,
+    'dark': $dark,
 ) !default;
 
 // // Set a specific jump point for requesting color jumps
