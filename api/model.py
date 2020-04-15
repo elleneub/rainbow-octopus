@@ -1,5 +1,4 @@
 from server import db, configure_db, connect_to_db
-from werkzeug.security import generate_password_hash, check_password_hash
 
 ##############################################################################
 # Model definitions
@@ -40,6 +39,21 @@ class User(db.Model):
                    email={self.email}
                    first_name={self.name}
                    last_name={self.name}>"""
+
+    @property    
+    def to_dict_for_json(self):
+        json_dict = {}
+        json_dict['user_id'] = self.user_id
+        json_dict['email'] = self.email
+        json_dict['first_name'] = self.first_name
+        json_dict['last_name'] = self.last_name
+        json_dict['created_on'] = self.created_on.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['modified_on'] = self.modified_on.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['phone_number'] = self.phone_number
+        json_dict['twitter_handle'] = self.twitter_handle
+        json_dict['facebook_handle'] = self.facebook_handle
+
+        return json_dict
 
 
 class Address(db.Model):
