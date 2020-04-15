@@ -22,8 +22,8 @@ code {
 
 .btn {
     padding: 0.5em 1em 0.5em 1em;
-    margin: 0.5em;
-box-shadow: 0px 5px 20px -10px rgb(49, 49, 49);
+    // margin: 0.5em;
+    box-shadow: 0px 5px 20px -10px rgb(49, 49, 49);
 }
 
 // PROFILE CARD
@@ -61,6 +61,7 @@ button.send-msg {
     border-radius: 5px;
     color: white;
     font-weight: 400;
+    line-height: 18px;
 }
 
 .social-icons {
@@ -99,8 +100,28 @@ hr {
     border: 1px solid $success;
     border-radius: 3px;
     display: inline-block;
-    // font-size: 12px; // Specify font size? 
+    font-size: 13px; // Specify font size? 
     margin: 0 7px 7px 0;
     padding: 7px;
     list-style-type: none;
+}
+
+// POST CARDS
+
+.post-card {
+    min-width: 18rem;
+    max-width: 24rem;
+
+    p {
+        font-size: 14px;
+    }
+}
+
+// POST DETAILS CARDS
+
+.post-details {
+
+    p {
+        font-size: 14px;
+    }
 }
