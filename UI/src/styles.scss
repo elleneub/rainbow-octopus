@@ -14,6 +14,11 @@ code {
         monospace;
 }
 
+// SPINNER
+.spinner {
+    margin-top: 10rem;
+}
+
 // BUTTONS
 
 .btn-primary {
@@ -69,7 +74,6 @@ button.send-msg {
     color: $success;
     margin-left: 5px;
     margin-right: 5px;
-
 }
 
 .payment {
@@ -100,7 +104,7 @@ hr {
     border: 1px solid $success;
     border-radius: 3px;
     display: inline-block;
-    font-size: 13px; // Specify font size? 
+    font-size: 13px; // Specify font size?
     margin: 0 7px 7px 0;
     padding: 7px;
     list-style-type: none;
@@ -120,7 +124,6 @@ hr {
 // POST DETAILS CARDS
 
 .post-details {
-
     p {
         font-size: 14px;
     }
