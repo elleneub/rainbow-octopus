@@ -8,23 +8,28 @@ class PostCard extends React.Component {
 
     render() {
         return (
-            <div className="card bg-light border-light shadow-sm d-flex justify-content-start">
+            <div className="card bg-light border-light shadow-sm post-card">
                 <div className="card-body">
-                    <h6 className="card-title font-weight-bold">
+                    <h5 className="card-title font-weight-bold text-left">
                         Need groceries pick-up
-                    </h6>
-                    <p className="card-subtitle mb-2 text-muted">
+                    </h5>
+                    <p className="card-subtitle mb-2 text-muted text-left">
                         NE Minneapolis
                     </p>
-                    <p className="card-text">
-                        I need someone to pick up my groceries because I live
-                        alone and have a compromised immune system.
-                    </p>
-                    <button className="btn-primary btn">
-                        <a href="/" className="card-link">
-                            Learn More
-                        </a>
-                    </button>
+
+                    <div className="row">
+                        <div className="col text-left">
+                            <p className="card-text">
+                                I need someone to pick up my groceries because I
+                                live alone and have a compromised immune system.
+                            </p>
+                        </div>
+                        <div class="col d-flex text-justify align-item-center">
+                            <button className="btn-primary btn btn-sm d-flex align-self-end">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
