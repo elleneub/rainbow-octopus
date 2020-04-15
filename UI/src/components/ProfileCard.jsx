@@ -61,14 +61,16 @@ class ProfileCard extends React.Component {
                 <div className="col">
                     <hr></hr>
                     <div className="skills">
-                        <h5 className="text-center m-3">Skills & Services I Offer</h5>
+                        <h5 className="text-center m-3">
+                            Skills & Services I Offer
+                        </h5>
                         <ul>
                             <li>sewing</li>
                             <li>groceries</li>
                             <li>cooking</li>
-                            <li>sewing</li>
-                            <li>groceries</li>
-                            <li>cooking</li>
+                            <li>driving</li>
+                            <li>yard work</li>
+                            <li>housework</li>
                         </ul>
                     </div>
                 </div>
