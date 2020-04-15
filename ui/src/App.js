@@ -25,6 +25,7 @@ class App extends React.Component {
                         component={CommunityGuidelinesPage}
                     />
                     <Route exact path="/demo" component={DemoPage} />
+                    <Route exact path="/home" component={HomePage} />
                     <Route exact path="" component={DemoPage} />
                 </Switch>
             </div>
