@@ -35,6 +35,7 @@ class User(db.Model):
     modified_on = db.Column(db.DateTime, nullable=False)
     # need an active field to mark if a user is active or not
     active = db.Column(db.Boolean, nullable=False, default=True)
+    pronouns = db.Column(db.String(300), nullable=True)
     phone_number = db.Column(db.String(60), nullable=False)
     twitter_handle = db.Column(db.String(100), nullable=True)
     facebook_handle = db.Column(db.String(100), nullable=True)
@@ -71,6 +72,7 @@ class User(db.Model):
         json_dict['phone_number'] = self.phone_number
         json_dict['twitter_handle'] = self.twitter_handle
         json_dict['facebook_handle'] = self.facebook_handle
+        json_dict['pronouns'] = self.pronouns
         json_dict['addresses'] = [address.to_dict_for_json for address in self.addresses]
         json_dict['payment_option'] = self.payment_option if self.payment_option is None else self.payment_option.to_dict_for_json
 
@@ -107,6 +109,7 @@ class Address(db.Model):
     @property
     def to_dict_for_json(self):
         return {
+            'address_id': self.address_id,
             'street_1': self.street_1,
             'street_2': self.street_2,
             'city': self.city,
@@ -137,6 +140,7 @@ class Payment_Option(db.Model):
     @property
     def to_dict_for_json(self):
         return {
+            'payment_option_id': self.payment_option_id,
             'cash': self.cash,
             'venmo': self.venmo,
             'paypal': self.paypal,
