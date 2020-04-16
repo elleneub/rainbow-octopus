@@ -131,6 +131,65 @@ hr {
     }
 }
 
+// FOOTER
+#footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary;
+    padding: 0px 20px;
+
+    .social {
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+
+        :hover {
+            color: $secondary;
+            cursor: pointer;
+        }
+    }
+
+    .copy {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    /* For a screen < 960px, this CSS will be read */
+  }
+
+@media (max-width: 720px) {
+    /* For a screen < 7200px, this CSS will be read */
+    #footer .social {
+      width: 120px;
+    }
+  }
+
+@media (max-width: 540px) {
+    /* For a screen < 540px, this CSS will be read */
+    #footer {
+        .social {
+            display: none;
+        }
+        .copy {
+            width: 100%;
+        }
+    }
+  }
+
 // FORM
 
 .form {
@@ -158,3 +217,4 @@ hr {
 .form-check-inline {
     margin-right: 2em;
 }
+
