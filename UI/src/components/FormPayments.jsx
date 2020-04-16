@@ -41,11 +41,15 @@ class FormPayments extends React.Component {
 
     render() {
         return (
-            <div className="form-group">
-                <label for="dropdown">
-                    What forms of payment can you accept?
+            <div className="form-group mt-4">
+                <label for="preferred-payment">
+                    What forms of payment can you accept/offer?<br></br>
+                    <em>
+                         ‣ Exchange of money may be required, e.g. grocery shopping.
+                    </em>
+                    
                 </label>
-                <div className="preferred-payment">
+                <div className="preferred-payment my-2">
                     <div className="form-check form-check-inline">
                         <input
                             type="checkbox"
