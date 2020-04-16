@@ -1,4 +1,5 @@
 import React from 'react'
+import FormCategories from './FormCategories'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     // faTwitter,
@@ -36,6 +37,7 @@ import {
     // faCoins,
     faHandshake,
 } from '@fortawesome/free-solid-svg-icons'
+import FormFrequency from './FormFrequency'
 
 class Form extends React.Component {
     render() {
@@ -79,51 +81,12 @@ class Form extends React.Component {
                         placeholder="Are there specific details your helper should know?"
                     />
                 </div>
-                <div className="form-group">
-                    <label for="dropdown">
-                        What type of services are you requesting?
-                    </label>
-                    <div class="dropdown">
-                        <button
-                            class="btn-sm btn btn-outline-primary dropdown-toggle text-dark"
-                            type="button"
-                            id="dropdown"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                        >
-                            Services
-                        </button>
-                        <div
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownMenuButton"
-                        >
-                            <button class="dropdown-item" href="#">
-                                Errands
-                            </button>
-                            <button class="dropdown-item" href="#">
-                                Transportation
-                            </button>
-                            <button class="dropdown-item" href="#">
-                                Light Housework
-                            </button>
-                            <button class="dropdown-item" href="#">
-                                Heavy Housework
-                            </button>
-                            <button class="dropdown-item" href="#">
-                                Light Yardwork
-                            </button>
-                            <button class="dropdown-item" href="#">
-                                Heavy Yardwork
-                            </button>
-                            <button class="dropdown-item" href="#">
-                                Other
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="mt-4">
+<FormCategories />
+                
+<FormFrequency />
+                
+                {/* <div className="mt-4">
                     <label for="custom-radio">
                         How often do you need help?
                     </label>
@@ -157,7 +120,7 @@ class Form extends React.Component {
                             Recurring
                         </label>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="form-group">
                     <label for="dropdown">
