@@ -54,11 +54,12 @@ class DemoPage extends React.Component {
     };
     
     async componentDidMount() {
-        const address = "350 Mt. Vernon Ave., Columbus, OH 43215";
+        const address = "43215";
         const mapboxAPIKey = "pk.eyJ1Ijoia2F5bGluYml0dG5lciIsImEiOiJjazkxejZ6cG8wMG0zM2tuN3IwaDB4ZzduIn0.HXn_ybie-wXPkHDQldW_Bw";
         const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${mapboxAPIKey}`;
         const response = await fetch(url);
         const data = await response.json();
+        console.log(data);
         this.setState({ latitude: data.features[0].geometry.coordinates[0]});
         this.setState({ longitude: data.features[0].geometry.coordinates[1]});
     }
