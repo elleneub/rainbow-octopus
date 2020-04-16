@@ -1,11 +1,12 @@
 import React from 'react'
+import FormPayments from 'components/FormPayments'
 
 class FormCreateUser extends React.Component {
     render() {
         return (
             <div className="container form bg-light">
+                <h5>Create Your Profile</h5>
                 <div className="form-group">
-                    <h5>Create Your Profile</h5>
                     <label for="name-input">Name</label>
                     <input
                         type="text"
@@ -13,6 +14,16 @@ class FormCreateUser extends React.Component {
                         id="name-input"
                         aria-describedby="TitleHelp"
                         placeholder="Name"
+                    />
+                </div>
+                <div className="form-group">
+                    <label for="pronouns-input">Pronouns</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="pronouns-input"
+                        aria-describedby="PronounHelp"
+                        placeholder="she/her, he/him, they them, zie/zir, etc."
                     />
                 </div>
                 <div className="form-group">
@@ -24,24 +35,7 @@ class FormCreateUser extends React.Component {
                         placeholder="Zip Code"
                     />
                 </div>
-                <div className="form-group">
-                    <label for="description">Description</label>
-                    <textarea
-                        type="text"
-                        className="form-control"
-                        id="description"
-                        placeholder="What is your request?"
-                    />
-                </div>
-                <div className="form-group">
-                    <label for="notes">Notes</label>
-                    <textarea
-                        type="text"
-                        className="form-control"
-                        id="notes"
-                        placeholder="Are there specific details your helper should know?"
-                    />
-                </div>
+                <FormPayments />
             </div>
         )
     }
