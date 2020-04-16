@@ -25,6 +25,7 @@ class ProfileCard extends React.Component {
             (socialType) => {
                 return (
                     <a
+                        // eslint-disable-next-line
                         target="_blank"
                         href={this.props.userData.social[socialType]}
                     >
