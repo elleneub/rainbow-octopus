@@ -104,9 +104,9 @@ class ProfileCard extends React.Component {
                     <h6 className="mx-1 text-center">Stevani's History of Requests & Offers</h6>
                     <PostCard />
                 </div>
-            </>
+            </div>
         )
     }
 }
 
-export default ProfileCard
+export default ProfileCard;
