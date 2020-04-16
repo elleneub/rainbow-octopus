@@ -151,6 +151,13 @@ hr {
     .dropdown {
         font-size: 13px;
     }
+
+    .form-check {
+        border: 1px solid $primary;
+        border-radius: 5px;
+        padding: 3px;
+        margin: 4px;
+    }
     
 }
 
