@@ -5,6 +5,8 @@
 
 // @import 'bootstrap/variables';
 // @import '~bootstrap/scss/bootstrap/variables';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@200;300;400;500&display=swap');
+
 
 // Color system
 
@@ -370,6 +372,8 @@ $theme-colors: (
 // // Font, line-height, and color for body text, headings, and more.
 
 // // stylelint-disable value-keyword-case
+$lobster: 'Lobster', cursive;
+$oswald: 'Oswald', sans-serif;
 // $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // $font-family-base:            var(--font-family-sans-serif) !default;

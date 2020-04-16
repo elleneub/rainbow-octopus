@@ -1,4 +1,9 @@
 @import 'custom-variables.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@200;300;400;500&display=swap');
+
+// Font Variables
+$lobster: 'Lobster', cursive;
+$oswald: 'Oswald', sans-serif;
 
 body {
     margin: 0;
@@ -17,7 +22,19 @@ code {
 // SPINNER
 .spinner {
     margin-top: 10rem;
+    text-align: center;
+
 }
+
+// PAGE TITLE 
+
+.page-title {
+    background: $success;
+    font-family: $lobster;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 28px;
 
 // BUTTONS
 
@@ -163,4 +180,5 @@ hr {
 
 .form-check-inline {
     margin-right: 2em;
+}
 }
