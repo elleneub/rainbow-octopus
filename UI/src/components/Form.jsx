@@ -82,45 +82,9 @@ class Form extends React.Component {
                     />
                 </div>
 
-<FormCategories />
-                
-<FormFrequency />
-                
-                {/* <div className="mt-4">
-                    <label for="custom-radio">
-                        How often do you need help?
-                    </label>
-                </div>
-                <div>
-                    <div className="custom-control custom-radio custom-control-inline ml-3">
-                        <input
-                            type="radio"
-                            id="customRadioInline1"
-                            name="customRadioInline1"
-                            className="custom-control-input"
-                        />
-                        <label
-                            className="custom-control-label"
-                            for="customRadioInline1"
-                        >
-                            One time
-                        </label>
-                    </div>
-                    <div className="custom-control custom-radio custom-control-inline ml-3 mb-4">
-                        <input
-                            type="radio"
-                            id="customRadioInline2"
-                            name="customRadioInline1"
-                            className="custom-control-input"
-                        />
-                        <label
-                            className="custom-control-label"
-                            for="customRadioInline2"
-                        >
-                            Recurring
-                        </label>
-                    </div>
-                </div> */}
+                <FormCategories />
+
+                <FormFrequency />
 
                 <div className="form-group">
                     <label for="dropdown">
@@ -225,4 +189,4 @@ class Form extends React.Component {
     }
 }
 
-export default Form;
+export default Form
