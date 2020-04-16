@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-import logo from 'images/logo.png'
+import logo from 'images/x-logo.png'
 // import navjs from 'bootstrap/js/dist/collapse'
 // require('bootstrap/js/dist/collapse')
 
@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <Link to="/home" className="navbar-brand">
-                    <img src={logo} width="30" height="30" alt="" />
+                    <img src={logo} width="50" height="50" alt="" />
                 </Link>
                 <button
                     className="navbar-toggler"
