@@ -2,6 +2,7 @@ import React from 'react'
 import ButtonPrimary from 'components/ButtonPrimary'
 import ButtonSecondary from 'components/ButtonSecondary'
 import PostDetails from 'components/PostDetails'
+import Form from 'components/Form'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -50,8 +51,11 @@ class DemoPage extends React.Component {
                 <ButtonPrimary />
                 <ButtonSecondary />
                 {/* <ProfileCard /> */}
+
                 {/* <PostCardSection /> */}
+
                 <PostDetails />
+                <Form />
 
                 <h2>General Icons</h2>
                 <FontAwesomeIcon icon={faEdit} />

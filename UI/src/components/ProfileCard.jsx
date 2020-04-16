@@ -7,6 +7,7 @@ import {
     faCcPaypal,
     faCcStripe,
 } from '@fortawesome/free-brands-svg-icons'
+import PostCard from './PostCard'
 
 class ProfileCard extends React.Component {
     socialIcons = {
@@ -25,6 +26,7 @@ class ProfileCard extends React.Component {
             (socialType) => {
                 return (
                     <a
+                        // eslint-disable-next-line
                         target="_blank"
                         rel="noopener noreferrer"
                         href={this.props.userData.social[socialType]}
@@ -53,6 +55,7 @@ class ProfileCard extends React.Component {
         )
 
         return (
+
             <div className="row card-container profile-card-container m-0">
                 <div className="col">
                     <img
@@ -65,37 +68,43 @@ class ProfileCard extends React.Component {
                             Send {this.props.userData.firstName} a Message
                         </button>
                     </div>
-                </div>
-                <div className="col-6">
-                    <h4 className="my-3">
-                        {this.props.userData.firstName +
-                            ' ' +
-                            this.props.userData.lastName}
-                    </h4>
-                    <h6 className="my-3">{this.props.userData.location}</h6>
-                    <div className="social-icons">{socialSection}</div>
-                    <div className="payment">
-                        <h6>
-                            I accept:
-                            <ul className="col justify-content-around mt-1">
-                                {paymentSection}
-                            </ul>
-                        </h6>
+                    <div className="col-6">
+                        <h4 className="my-3">
+                            {this.props.userData.firstName +
+                                ' ' +
+                                this.props.userData.lastName}
+                        </h4>
+                        <h6 className="my-3">{this.props.userData.location}</h6>
+                        <div className="social-icons">{socialSection}</div>
+                        <div className="payment">
+                            <h6>
+                                I accept:
+                                <ul className="col justify-content-around mt-1">
+                                    {paymentSection}
+                                </ul>
+                            </h6>
+                        </div>
                     </div>
-                </div>
 
-                <div className="col">
-                    <hr></hr>
-                    <div className="skills">
-                        <h5 className="text-center m-3">I Can Help With:</h5>
-                        <ul>
-                            {this.props.userData.skills.map((skill) => {
-                                return <li>{skill}</li>
-                            })}
-                        </ul>
+                    <div className="col">
+                        <hr></hr>
+                        <div className="skills">
+                            <h5 className="text-center m-3">
+                                I Can Help With:
+                            </h5>
+                            <ul>
+                                {this.props.userData.skills.map((skill) => {
+                                    return <li>{skill}</li>
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div className="container mt-4">
+                    <h6 className="mx-1 text-center">Stevani's History of Requests & Offers</h6>
+                    <PostCard />
+                </div>
+            </>
         )
     }
 }
