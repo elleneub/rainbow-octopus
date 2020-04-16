@@ -90,10 +90,10 @@ def create_update_request():
         'active': True
     }
 
-    if request_id is not None:
+    if request_id:
         request_args['request_id'] = request_id
 
-    if volunteer_user_id is not None:
+    if volunteer_user_id:
         request_args['volunteer_user_id'] = volunteer_user_id
 
     app_request = App_Request(**request_args)
@@ -155,9 +155,9 @@ def create_update_offer():
         'active': True
     }
 
-    if offer_id is not None:
+    if offer_id:
         offer_args['offer_id'] = offer_id
-    if expiration_date is not None:
+    if expiration_date:
         offer_args['expiration_date'] = expiration_date
 
     offer = Offer(**offer_args)
