@@ -1,11 +1,12 @@
-import React from 'react'
-import ButtonPrimary from 'components/ButtonPrimary'
-import ButtonSecondary from 'components/ButtonSecondary'
-import ProfileCard from 'components/ProfileCard'
-import PostCard from 'components/PostCard'
-import PostDetails from 'components/PostDetails'
+import React from 'react';
+import ButtonPrimary from 'components/ButtonPrimary';
+import ButtonSecondary from 'components/ButtonSecondary';
+import ProfileCard from 'components/ProfileCard';
+import PostCard from 'components/PostCard';
+import PostDetails from 'components/PostDetails';
+import Map from 'components/Map';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faTwitter,
     faInstagram,
@@ -44,8 +45,25 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 class DemoPage extends React.Component {
+
+    // This is for calling an API related to MapBox -- needs to be on whichever page we render the map
+    // Will take address information from USER and convert to coordinates to be rendered on the map
+    state = {
+        latitude: 39.982,
+        longitude: -82.998
+    };
+    
+    async componentDidMount() {
+        const address = "350 Mt. Vernon Ave., Columbus, OH 43215";
+        const mapboxAPIKey = "pk.eyJ1Ijoia2F5bGluYml0dG5lciIsImEiOiJjazkxejZ6cG8wMG0zM2tuN3IwaDB4ZzduIn0.HXn_ybie-wXPkHDQldW_Bw";
+        const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${mapboxAPIKey}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        this.setState({ latitude: data.features[0].geometry.coordinates[0]});
+        this.setState({ longitude: data.features[0].geometry.coordinates[1]});
+    }
+
     render() {
-        console.log('rendering demo page')
         return (
             <div className="demo-page">
                 <h1>Helper App</h1>
@@ -54,7 +72,8 @@ class DemoPage extends React.Component {
                 <ProfileCard />
                 <PostCard />
                 <PostDetails />
-
+                <Map />
+                
                 <h2>General Icons</h2>
                 <FontAwesomeIcon icon={faEdit} />
                 <FontAwesomeIcon icon={faBars} />

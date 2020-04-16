@@ -26,7 +26,7 @@ class PostCard extends React.Component {
                                     immune system.
                                 </p>
                             </div>
-                            <div class="col d-flex text-justify align-item-center">
+                            <div className="col d-flex text-justify align-item-center">
                                 <button className="btn-primary btn btn-sm d-flex align-self-end">
                                     Learn More
                                 </button>
@@ -52,7 +52,7 @@ class PostCard extends React.Component {
                                     immune system.
                                 </p>
                             </div>
-                            <div class="col d-flex text-justify align-item-center">
+                            <div className="col d-flex text-justify align-item-center">
                                 <button className="btn-primary btn btn-sm d-flex align-self-end">
                                     Learn More
                                 </button>
@@ -78,7 +78,7 @@ class PostCard extends React.Component {
                                     immune system.
                                 </p>
                             </div>
-                            <div class="col d-flex text-justify align-item-center">
+                            <div className="col d-flex text-justify align-item-center">
                                 <button className="btn-primary btn btn-sm d-flex align-self-end">
                                     Learn More
                                 </button>
