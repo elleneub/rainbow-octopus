@@ -1,8 +1,6 @@
 import React from 'react'
 import ButtonPrimary from 'components/ButtonPrimary'
 import ButtonSecondary from 'components/ButtonSecondary'
-// import ProfileCard from 'components/ProfileCard'
-import PostCard from 'components/PostCard'
 import PostDetails from 'components/PostDetails'
 import Form from 'components/Form'
 
@@ -53,7 +51,9 @@ class DemoPage extends React.Component {
                 <ButtonPrimary />
                 <ButtonSecondary />
                 {/* <ProfileCard /> */}
-                <PostCard />
+
+                {/* <PostCardSection /> */}
+
                 <PostDetails />
                 <Form />
 

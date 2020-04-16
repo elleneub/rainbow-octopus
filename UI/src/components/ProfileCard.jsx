@@ -28,6 +28,7 @@ class ProfileCard extends React.Component {
                     <a
                         // eslint-disable-next-line
                         target="_blank"
+                        rel="noopener noreferrer"
                         href={this.props.userData.social[socialType]}
                     >
                         <FontAwesomeIcon
@@ -54,19 +55,18 @@ class ProfileCard extends React.Component {
         )
 
         return (
-            <>
-                <div className="row card-container m-0">
-                    <div className="col">
-                        <img
-                            className="round"
-                            src={this.props.userData.image}
-                            alt="user"
-                        />
-                        <div className="buttons my-3">
-                            <button className="send-msg btn">
-                                Send {this.props.userData.firstName} a Message
-                            </button>
-                        </div>
+
+            <div className="row card-container profile-card-container m-0">
+                <div className="col">
+                    <img
+                        className="round"
+                        src={this.props.userData.image}
+                        alt="user"
+                    />
+                    <div className="buttons my-3">
+                        <button className="send-msg btn">
+                            Send {this.props.userData.firstName} a Message
+                        </button>
                     </div>
                     <div className="col-6">
                         <h4 className="my-3">
