@@ -1,11 +1,11 @@
-import React from 'react'
-import ButtonPrimary from 'components/ButtonPrimary'
-import ButtonSecondary from 'components/ButtonSecondary'
-import ProfileCard from 'components/ProfileCard'
-import PostCard from 'components/PostCard'
-import PostDetails from 'components/PostDetails'
+import React from 'react';
+import ButtonPrimary from 'components/ButtonPrimary';
+import ButtonSecondary from 'components/ButtonSecondary';
+import ProfileCard from 'components/ProfileCard';
+import PostCard from 'components/PostCard';
+import PostDetails from 'components/PostDetails';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faTwitter,
     faInstagram,
@@ -22,7 +22,7 @@ import {
     faAmazonPay,
     faStripe,
     faStripeS,
-} from '@fortawesome/free-brands-svg-icons'
+} from '@fortawesome/free-brands-svg-icons';
 import {
     faBars,
     faUser,
@@ -41,7 +41,7 @@ import {
     faMoneyBillWaveAlt,
     faCoins,
     faHandshake,
-} from '@fortawesome/free-solid-svg-icons'
+} from '@fortawesome/free-solid-svg-icons';
 
 class DemoPage extends React.Component {
     render() {
