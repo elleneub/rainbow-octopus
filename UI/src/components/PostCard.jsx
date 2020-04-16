@@ -8,11 +8,12 @@ class PostCard extends React.Component {
 
     render() {
         return (
-            <div className="card-deck mx-2 d-flex justify-content-center flex-wrap">
+
+                <div className="card-deck mx-2 d-flex justify-content-center flex-wrap">
                 <div className="card post-card bg-light shadow-sm m-3 border-primary">
                     <div className="card-body text-inline">
                         <h5 className="card-title font-weight-bold text-left">
-                            Need groceries pick-up
+                            Groceries pick-up
                         </h5>
                         <p className="card-subtitle mb-2 text-muted text-left">
                             NE Minneapolis
@@ -21,9 +22,7 @@ class PostCard extends React.Component {
                         <div className="row">
                             <div className="col-7 text-left">
                                 <p className="card-text">
-                                    I need someone to pick up my groceries
-                                    because I live alone and have a compromised
-                                    immune system.
+                                    I work in a hospital and need to quarantine myself as much as possible between shifts. I need someone to help with grocery shopping and delivery.
                                 </p>
                             </div>
                             <div className="col d-flex text-justify align-item-center">
@@ -38,18 +37,16 @@ class PostCard extends React.Component {
                 <div className="card post-card bg-light shadow-sm m-3 border-primary">
                     <div className="card-body text-inline">
                         <h5 className="card-title font-weight-bold text-left">
-                            Need groceries pick-up
+                            I need a ride to the pharmacy
                         </h5>
                         <p className="card-subtitle mb-2 text-muted text-left">
-                            NE Minneapolis
+                            St. Louis Park, MN
                         </p>
 
                         <div className="row">
                             <div className="col-7 text-left">
                                 <p className="card-text">
-                                    I need someone to pick up my groceries
-                                    because I live alone and have a compromised
-                                    immune system.
+                                    I usually take the bus, but I'd like to find a ride so I don't have to expose myself to multiple people.
                                 </p>
                             </div>
                             <div className="col d-flex text-justify align-item-center">
@@ -64,18 +61,16 @@ class PostCard extends React.Component {
                 <div className="card post-card bg-light shadow-sm m-3 border-primary">
                     <div className="card-body text-inline">
                         <h5 className="card-title font-weight-bold text-left">
-                            Need groceries pick-up
+                            Walk my dog
                         </h5>
                         <p className="card-subtitle mb-2 text-muted text-left">
-                            NE Minneapolis
+                            Mendota Heights, MN
                         </p>
 
                         <div className="row">
                             <div className="col-7 text-left">
                                 <p className="card-text">
-                                    I need someone to pick up my groceries
-                                    because I live alone and have a compromised
-                                    immune system.
+                                    I live alone and am not feeling well, so it'd be great to find a volunteer to walk my dog twice a day.
                                 </p>
                             </div>
                             <div className="col d-flex text-justify align-item-center">
