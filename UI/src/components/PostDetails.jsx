@@ -46,13 +46,15 @@ class PostDetails extends React.Component {
                         <strong>Recurring? </strong>
                         {this.state.recurring}
                     </p>
-                    <button className="btn-primary btn btn-sm d-flex align-self-end">
-                        Contact {this.state.name}
-                    </button>
-                    {/* <div className="row">
-                        <div className="col text-left"></div>
-                        <div class="col d-flex text-justify align-item-center"></div>
-                    </div> */}
+                    <div className="row px-3">
+                        <button className="btn-primary btn btn-sm d-flex align-self-end mr-2">
+                            Contact {this.state.name}
+                        </button>
+                        <button className="btn-outline-primary btn btn-sm d-flex align-self-end mt-2">
+                            Back to List
+                        </button>
+                        {/* <a href="/" className="mt-5">Back to List</a> */}
+                    </div>
                 </div>
             </div>
         )
