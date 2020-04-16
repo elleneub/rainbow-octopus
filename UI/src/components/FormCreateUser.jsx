@@ -23,7 +23,7 @@ class FormCreateUser extends React.Component {
                         className="form-control"
                         id="pronouns-input"
                         aria-describedby="PronounHelp"
-                        placeholder="she/her, he/him, they them, zie/zir, etc."
+                        placeholder="she/her, he/him, they/them, zie/zir, etc."
                     />
                 </div>
                 <div className="form-group">
