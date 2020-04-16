@@ -135,14 +135,22 @@ hr {
     border-radius: 5px;
     border: solid 1px $primary;
     padding: 20px;
+    font-size: 13px;
 
     input {
         border: solid 1px $primary;
+        font-size: 13px;
     }
 
     textarea {
         border: solid 1px $primary;
+        font-size: 13px;
     }
+    
+    .dropdown {
+        font-size: 13px;
+    }
+    
 }
 
 .form-check-inline {
