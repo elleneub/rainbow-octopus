@@ -1,5 +1,23 @@
 from server import db, configure_db, connect_to_db
 
+# tables
+request_categories = db.Table('request_categories',
+                     db.Column('category_id', db.Integer, 
+                               db.ForeignKey("categories.category_id"),
+                               primary_key=True),
+                     db.Column('request_id', db.Integer,
+                               db.ForeignKey("requests.request_id"),
+                               primary_key=True)
+                     )
+offer_categories = db.Table('offer_categories',
+                     db.Column('category_id', db.Integer, 
+                               db.ForeignKey("categories.category_id"),
+                               primary_key=True),
+                     db.Column('offer_id', db.Integer,
+                               db.ForeignKey("offers.offer_id"),
+                               primary_key=True)
+                     )
+
 ##############################################################################
 # Model definitions
 
@@ -26,7 +44,8 @@ class User(db.Model):
                                 order_by=user_id))
 
     payment_option = db.relationship("Payment_Option", 
-                                    backref=db.backref("user_payment_options"))
+                                    backref=db.backref("user_payment_options"),
+                                    uselist=False)
 
     # requests = db.relationship("Request", backref=db.backref("requests",
     #                            order_by=user_id))
@@ -52,18 +71,22 @@ class User(db.Model):
         json_dict['phone_number'] = self.phone_number
         json_dict['twitter_handle'] = self.twitter_handle
         json_dict['facebook_handle'] = self.facebook_handle
+        json_dict['addresses'] = [address.to_dict_for_json for address in self.addresses]
+        json_dict['payment_option'] = self.payment_option if self.payment_option is None else self.payment_option.to_dict_for_json
 
         return json_dict
 
 
 class Address(db.Model):
+
     __tablename__ = "addresses"
 
     # I used the field lengths given for these type of fields in the 
     # api documentation for "smartystreets.com" us-street-api
 
     address_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"), 
+                        nullable=True)
     street_1 = db.Column(db.String(50), nullable=False)
     street_2 = db.Column(db.String(50), nullable=True)
     city =  db.Column(db.String(64), nullable=False)
@@ -81,8 +104,21 @@ class Address(db.Model):
                    country={self.country}
                    zipcode={self.zipcode}>"""
 
+    @property
+    def to_dict_for_json(self):
+        return {
+            'street_1': self.street_1,
+            'street_2': self.street_2,
+            'city': self.city,
+            'state': self.state,
+            'country': self.country,
+            'zipcode': self.zipcode
+        }
+    
+
 
 class Payment_Option(db.Model):
+
     __tablename__ = "user_payment_options"
 
     payment_option_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -98,8 +134,20 @@ class Payment_Option(db.Model):
         return f"""<Payment_Option payment_option_id={self.payment_option_id}
                 user_id={self.user_id}"""
 
+    @property
+    def to_dict_for_json(self):
+        return {
+            'cash': self.cash,
+            'venmo': self.venmo,
+            'paypal': self.paypal,
+            'stripe': self.stripe,
+            'barter': self.barter,
+            'other': self.other
+        }
+
 
 class Category(db.Model):
+
     __tablename__ = "categories"
 
     category_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -109,9 +157,18 @@ class Category(db.Model):
     def __repr__(self):
         return f"""<Category name={self.name}"""
 
+    @property
+    def to_dict_for_json(self):
+        return {
+            'category_id': self.category_id,
+            'name': self.name
+        }
+    
+
 
 
 class Offer(db.Model):
+
     __tablename__ = "offers"
 
     offer_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -121,9 +178,12 @@ class Offer(db.Model):
     modified_on = db.Column(db.DateTime, nullable=False)
     recurring = db.Column(db.Boolean, nullable=False, default=False)
     description = db.Column(db.String(1000), nullable=True)
+    active = db.Column(db.Boolean, nullable=False, default=True)
 
     offers_requested = db.relationship("Offer_Requested", 
                                         backref=db.backref("offers"))
+    offer_categories = db.relationship('Category',secondary=offer_categories)
+
 
     def __repr__(self):
         return f"""<Offer offer_id={self.offer_id}
@@ -132,8 +192,24 @@ class Offer(db.Model):
                    modified_on={self.modified_on}
                    recurring={self.recurring}"""
 
+    @property    
+    def to_dict_for_json(self):
+        json_dict = {}
+        json_dict['offer_id'] = self.offer_id
+        json_dict['offerer_uid'] = self.offerer_uid
+        json_dict['description'] = self.description
+        json_dict['recurring'] = self.recurring
+        json_dict['created_on'] = self.created_on.strftime('%b %d, %Y %H:%M:%S')
+        if self.expiration_date is not None:
+            json_dict['expiration_date'] = self.expiration_date.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['modified_on'] = self.modified_on.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['offer_categories'] = [category.to_dict_for_json for category in self.offer_categories]
+
+        return json_dict
+
 
 class Offer_Requested(db.Model):
+
     __tablename__ = "offers_requested"
 
     offer_requested_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -149,6 +225,7 @@ class Offer_Requested(db.Model):
 
 
 class Request(db.Model):
+
     __tablename__ = "requests"
 
     request_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -160,7 +237,10 @@ class Request(db.Model):
     active = db.Column(db.Boolean, nullable=False, default=True)
     created_on = db.Column(db.DateTime, nullable=False)
     modified_on = db.Column(db.DateTime, nullable=False)
-    service_needed_at = db.Column(db.Integer, db.ForeignKey("addresses.address_id"))
+    service_needed_at = db.Column(db.Integer, db.ForeignKey("addresses.address_id"),
+                                  nullable=True)
+
+    request_categories = db.relationship('Category',secondary=request_categories)
 
     def __repr__(self):
         return f"""<Request request_id={self.request_id}
@@ -172,32 +252,19 @@ class Request(db.Model):
                     created_on={self.created_on}
                     service_needed_at={self.service_needed_at}>"""
 
+    @property    
+    def to_dict_for_json(self):
+        json_dict = {}
+        json_dict['request_id'] = self.request_id
+        json_dict['requester_user_id'] = self.requester_user_id
+        json_dict['volunteer_user_id'] = self.volunteer_user_id
+        json_dict['notes'] = self.notes
+        json_dict['fulfilled'] = self.fulfilled
+        json_dict['created_on'] = self.created_on.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['modified_on'] = self.modified_on.strftime('%b %d, %Y %H:%M:%S')
+        json_dict['request_categories'] = [category.to_dict_for_json for category in self.request_categories]
 
-class Request_Category(db.Model):
-    __tablename__ = "request_categories"
-
-    request_category_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey("categories.category_id"))
-    request_id = db.Column(db.Integer, db.ForeignKey("requests.request_id"))
-
-    def __repr__(self):
-        return f"""<Request_Category 
-                    request_category_id={self.request_category_id}"""
-
-class Offer_Category(db.Model):
-    __tablename__ = "offer_categories"
-
-    offer_category_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey("categories.category_id"))
-    offer_id = db.Column(db.Integer, db.ForeignKey("offers.offer_id"))
-
-
-    def __repr__(self):
-        return f"""<Offer_Category 
-                    offer_category_id={self.offer_category_id}"""
-
-
-
+        return json_dict
 
 
 ##############################################################################
