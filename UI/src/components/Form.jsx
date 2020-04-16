@@ -10,7 +10,7 @@ class Form extends React.Component {
             <div className="container form bg-light">
                 <div className="form-group">
                     <h5>Post a Request for Help</h5>
-                    <label for="title-input">Title</label>
+                    <label htmlFor="title-input">Title</label>
                     <input
                         type="text"
                         className="form-control"
@@ -20,7 +20,7 @@ class Form extends React.Component {
                     />
                 </div>
                 <div className="form-group">
-                    <label for="location">Zip Code</label>
+                    <label htmlFor="location">Zip Code</label>
                     <input
                         type="text"
                         className="form-control"
@@ -29,7 +29,7 @@ class Form extends React.Component {
                     />
                 </div>
                 <div className="form-group">
-                    <label for="description">Description</label>
+                    <label htmlFor="description">Description</label>
                     <textarea
                         type="text"
                         className="form-control"
@@ -38,7 +38,7 @@ class Form extends React.Component {
                     />
                 </div>
                 <div className="form-group">
-                    <label for="notes">Notes</label>
+                    <label htmlFor="notes">Notes</label>
                     <textarea
                         type="text"
                         className="form-control"
@@ -51,7 +51,7 @@ class Form extends React.Component {
 
                 <FormFrequency />
 
-           <FormPayments />
+                <FormPayments />
 
                 <div className="button-form mt-4">
                     <button type="submit" className="btn btn-primary">

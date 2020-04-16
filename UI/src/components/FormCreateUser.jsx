@@ -7,7 +7,7 @@ class FormCreateUser extends React.Component {
             <div className="container form bg-light">
                 <h5>Create Your Profile</h5>
                 <div className="form-group">
-                    <label for="name-input">Name</label>
+                    <label htmlFor="name-input">Name</label>
                     <input
                         type="text"
                         className="form-control"
@@ -17,7 +17,7 @@ class FormCreateUser extends React.Component {
                     />
                 </div>
                 <div className="form-group">
-                    <label for="pronouns-input">Pronouns</label>
+                    <label htmlFor="pronouns-input">Pronouns</label>
                     <input
                         type="text"
                         className="form-control"
@@ -27,7 +27,7 @@ class FormCreateUser extends React.Component {
                     />
                 </div>
                 <div className="form-group">
-                    <label for="location">Zip Code</label>
+                    <label htmlFor="location">Zip Code</label>
                     <input
                         type="text"
                         className="form-control"
