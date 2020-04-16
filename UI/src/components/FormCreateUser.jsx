@@ -1,5 +1,6 @@
 import React from 'react'
 import FormPayments from 'components/FormPayments'
+import ProfileCategories from './ProfileCategories'
 
 class FormCreateUser extends React.Component {
     render() {
@@ -36,6 +37,25 @@ class FormCreateUser extends React.Component {
                     />
                 </div>
                 <FormPayments />
+                <ProfileCategories />
+                <div className="form-group">
+                    <label for="social">Twitter</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="social"
+                        placeholder="Twitter Profile URL"
+                    />
+                </div>
+                <div className="form-group">
+                    <label for="social">Facebook</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="social"
+                        placeholder="Facebook Profile URL"
+                    />
+                </div>
             </div>
         )
     }
