@@ -128,3 +128,23 @@ hr {
         font-size: 14px;
     }
 }
+
+// FORM
+
+.form {
+    border-radius: 5px;
+    border: solid 1px $primary;
+    padding: 20px;
+
+    input {
+        border: solid 1px $primary;
+    }
+
+    textarea {
+        border: solid 1px $primary;
+    }
+}
+
+.form-check-inline {
+    margin-right: 2em;
+}
