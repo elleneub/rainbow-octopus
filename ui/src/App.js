@@ -9,7 +9,7 @@ import MessagesPage from './pages/Messages.jsx'
 import CommunityGuidelinesPage from './pages/CommunityGuidelines.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from 'components/Footer'
-import axios from 'axios'
+// import axios from 'axios'
 
 class App extends React.Component {
     constructor(props) {
