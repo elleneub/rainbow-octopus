@@ -26,6 +26,7 @@ class ProfileCard extends React.Component {
                 return (
                     <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href={this.props.userData.social[socialType]}
                     >
                         <FontAwesomeIcon
@@ -52,7 +53,7 @@ class ProfileCard extends React.Component {
         )
 
         return (
-            <div className="row card-container m-0">
+            <div className="row card-container profile-card-container m-0">
                 <div className="col">
                     <img
                         className="round"
