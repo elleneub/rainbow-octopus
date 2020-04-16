@@ -51,7 +51,7 @@ class DemoPage extends React.Component {
                 <h1>Helper App</h1>
                 <ButtonPrimary />
                 <ButtonSecondary />
-                <ProfileCard />
+                {/* <ProfileCard /> */}
                 <PostCard />
                 <PostDetails />
 
