@@ -6,6 +6,7 @@ class FilterAndPostHeader extends React.Component {
             <div className="row">
                 <h5 className="col-sm-2 my-2">Filter by:</h5>
                 <div className="col-sm-2 my-2">
+                    {/* Replace with the actual category select */}
                     <select
                         className="custom-select mr-2"
                         onChange={this.props.changeFilterCategoryHandler}
