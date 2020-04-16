@@ -6,8 +6,8 @@ import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
 
 export default function Map(state) {
     state = {
-        latitude: 39.982,
-        longitude: -82.998
+        latitude: 39.97,
+        longitude: -83
     };
     const [viewport, setViewport] = useState ({
         latitude: state.latitude,
