@@ -5,7 +5,7 @@ class FormFrequency extends React.Component {
         return (
             <div className="form-group">
                 <div className="mt-4">
-                    <label for="custom-radio">
+                    <label htmlFor="custom-radio">
                         How often do you need help?
                     </label>
                 </div>
@@ -19,7 +19,7 @@ class FormFrequency extends React.Component {
                         />
                         <label
                             className="custom-control-label"
-                            for="customRadioInline1"
+                            htmlFor="customRadioInline1"
                         >
                             One time
                         </label>
@@ -33,7 +33,7 @@ class FormFrequency extends React.Component {
                         />
                         <label
                             className="custom-control-label"
-                            for="customRadioInline2"
+                            htmlFor="customRadioInline2"
                         >
                             Recurring
                         </label>

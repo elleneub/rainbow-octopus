@@ -55,7 +55,6 @@ class ProfileCard extends React.Component {
         )
 
         return (
-
             <div className="row card-container profile-card-container m-0">
                 <div className="col">
                     <img
@@ -101,12 +100,14 @@ class ProfileCard extends React.Component {
                     </div>
                 </div>
                 <div className="container mt-4">
-                    <h6 className="mx-1 text-center">Stevani's History of Requests & Offers</h6>
-                    <PostCard />
+                    <h6 className="mx-1 text-center">
+                        Stevani's History of Requests & Offers
+                    </h6>
+                    <PostCard postData={{}} />
                 </div>
             </div>
         )
     }
 }
 
-export default ProfileCard;
+export default ProfileCard

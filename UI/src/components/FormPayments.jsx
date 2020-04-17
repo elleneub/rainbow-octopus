@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     // faTwitter,
@@ -38,16 +38,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 class FormPayments extends React.Component {
-
     render() {
         return (
             <div className="form-group mt-4">
-                <label for="preferred-payment">
+                <label htmlFor="preferred-payment">
                     What forms of payment can you accept/offer?<br></br>
                     <em>
-                         ‣ Exchange of money may be required, e.g. grocery shopping.
+                        ‣ Exchange of money may be required, e.g. grocery
+                        shopping.
                     </em>
-                    
                 </label>
                 <div className="preferred-payment my-2">
                     <div className="form-check form-check-inline">
@@ -56,7 +55,7 @@ class FormPayments extends React.Component {
                             className="form-check-input"
                             id="cash"
                         />
-                        <label className="form-check-label" for="cash">
+                        <label className="form-check-label" htmlFor="cash">
                             <FontAwesomeIcon
                                 icon={faMoneyBillWave}
                                 className="mr-1"
@@ -71,7 +70,7 @@ class FormPayments extends React.Component {
                             className="form-check-input"
                             id="paypal"
                         />
-                        <label className="form-check-label" for="paypal">
+                        <label className="form-check-label" htmlFor="paypal">
                             <FontAwesomeIcon icon={faPaypal} className="mr-1" />
                             PayPal
                         </label>
@@ -82,7 +81,7 @@ class FormPayments extends React.Component {
                             className="form-check-input"
                             id="applepay"
                         />
-                        <label className="form-check-label" for="applepay">
+                        <label className="form-check-label" htmlFor="applepay">
                             <FontAwesomeIcon
                                 icon={faCcApplePay}
                                 className="mr-1"
@@ -96,7 +95,7 @@ class FormPayments extends React.Component {
                             className="form-check-input"
                             id="barter"
                         />
-                        <label className="form-check-label" for="barter">
+                        <label className="form-check-label" htmlFor="barter">
                             <FontAwesomeIcon
                                 icon={faHandshake}
                                 className="mr-1"
@@ -110,7 +109,7 @@ class FormPayments extends React.Component {
                             className="form-check-input"
                             id="stripe"
                         />
-                        <label className="form-check-label" for="stripe">
+                        <label className="form-check-label" htmlFor="stripe">
                             <FontAwesomeIcon
                                 icon={faCcStripe}
                                 className="mr-1"
@@ -124,7 +123,7 @@ class FormPayments extends React.Component {
                             className="form-check-input"
                             id="amazonpay"
                         />
-                        <label className="form-check-label" for="amazonpay">
+                        <label className="form-check-label" htmlFor="amazonpay">
                             <FontAwesomeIcon
                                 icon={faAmazonPay}
                                 className="mr-1"
@@ -138,4 +137,4 @@ class FormPayments extends React.Component {
     }
 }
 
-export default FormPayments;
+export default FormPayments

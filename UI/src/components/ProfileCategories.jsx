@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 class ProfileCategories extends React.Component {
     render() {
         return (
             <div className="form-group mt-4">
-                <label for="categories">
+                <label htmlFor="categories">
                     What help can you offer (if any)?<br></br>
                 </label>
                 <div className="categories my-2">
@@ -14,7 +14,7 @@ class ProfileCategories extends React.Component {
                             className="form-check-input"
                             id="errands"
                         />
-                        <label className="form-check-label" for="errands">
+                        <label className="form-check-label" htmlFor="errands">
                             {/* <FontAwesomeIcon
                                 icon={faMoneyBillWave}
                                 className="mr-1"
@@ -31,7 +31,7 @@ class ProfileCategories extends React.Component {
                         />
                         <label
                             className="form-check-label"
-                            for="transportation"
+                            htmlFor="transportation"
                         >
                             {/* <FontAwesomeIcon
                                 icon={fatransportation}
@@ -48,7 +48,7 @@ class ProfileCategories extends React.Component {
                         />
                         <label
                             className="form-check-label"
-                            for="light-housework"
+                            htmlFor="light-housework"
                         >
                             {/* <FontAwesomeIcon
                                 icon={faCclight - housework}
@@ -65,7 +65,7 @@ class ProfileCategories extends React.Component {
                         />
                         <label
                             className="form-check-label"
-                            for="heavy-housework"
+                            htmlFor="heavy-housework"
                         >
                             {/* <FontAwesomeIcon
                                 icon={faHandshake}
@@ -82,7 +82,7 @@ class ProfileCategories extends React.Component {
                         />
                         <label
                             className="form-check-label"
-                            for="light-yardwork"
+                            htmlFor="light-yardwork"
                         >
                             {/* <FontAwesomeIcon
                                 icon={faCclight - yardwork}
@@ -99,7 +99,7 @@ class ProfileCategories extends React.Component {
                         />
                         <label
                             className="form-check-label"
-                            for="heavy-yardwork"
+                            htmlFor="heavy-yardwork"
                         >
                             {/* <FontAwesomeIcon
                                 icon={faheavy - yardwork}
@@ -114,10 +114,7 @@ class ProfileCategories extends React.Component {
                             className="form-check-input"
                             id="other"
                         />
-                        <label
-                            className="form-check-label"
-                            for="other"
-                        >
+                        <label className="form-check-label" htmlFor="other">
                             {/* <FontAwesomeIcon
                                 icon={faheavy - yardwork}
                                 className="mr-1"
@@ -131,4 +128,4 @@ class ProfileCategories extends React.Component {
     }
 }
 
-export default ProfileCategories;
+export default ProfileCategories

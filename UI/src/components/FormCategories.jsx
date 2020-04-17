@@ -1,16 +1,15 @@
-import React from 'react';
+import React from 'react'
 
 class FormCategories extends React.Component {
-
     render() {
         return (
             <div className="form-group">
-                <label for="dropdown">
+                <label htmlFor="dropdown">
                     What type of services are you requesting?
                 </label>
-                <div class="dropdown">
+                <div className="dropdown">
                     <button
-                        class="btn-sm btn btn-outline-primary dropdown-toggle text-dark"
+                        className="btn-sm btn btn-outline-primary dropdown-toggle text-dark"
                         type="button"
                         id="dropdown"
                         data-toggle="dropdown"
@@ -20,28 +19,28 @@ class FormCategories extends React.Component {
                         Services
                     </button>
                     <div
-                        class="dropdown-menu"
+                        className="dropdown-menu"
                         aria-labelledby="dropdownMenuButton"
                     >
-                        <button class="dropdown-item" href="#">
+                        <button className="dropdown-item" href="#">
                             Errands
                         </button>
-                        <button class="dropdown-item" href="#">
+                        <button className="dropdown-item" href="#">
                             Transportation
                         </button>
-                        <button class="dropdown-item" href="#">
+                        <button className="dropdown-item" href="#">
                             Light Housework
                         </button>
-                        <button class="dropdown-item" href="#">
+                        <button className="dropdown-item" href="#">
                             Heavy Housework
                         </button>
-                        <button class="dropdown-item" href="#">
+                        <button className="dropdown-item" href="#">
                             Light Yardwork
                         </button>
-                        <button class="dropdown-item" href="#">
+                        <button className="dropdown-item" href="#">
                             Heavy Yardwork
                         </button>
-                        <button class="dropdown-item" href="#">
+                        <button className="dropdown-item" href="#">
                             Other
                         </button>
                     </div>
@@ -51,4 +50,4 @@ class FormCategories extends React.Component {
     }
 }
 
-export default FormCategories;
+export default FormCategories
