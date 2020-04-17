@@ -7,9 +7,9 @@ import FormFrequency from './FormFrequency'
 class Form extends React.Component {
     render() {
         return (
-            <div className="container form bg-light">
+            <div className="container form-requestoffer bg-light border border-secondary">
                 <div className="form-group">
-                    <h5>Post a Request for Help</h5>
+                    {/* <h5>Post a Request for Help</h5> */}
                     <label htmlFor="title-input">Title</label>
                     <input
                         type="text"
@@ -53,11 +53,6 @@ class Form extends React.Component {
 
                 <FormPayments />
 
-                <div className="button-form mt-4">
-                    <button type="submit" className="btn btn-primary">
-                        Submit
-                    </button>
-                </div>
             </div>
         )
     }

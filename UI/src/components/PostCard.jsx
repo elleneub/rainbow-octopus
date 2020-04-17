@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 class PostCard extends React.Component {
     constructor(props) {
@@ -24,24 +23,15 @@ class PostCard extends React.Component {
                             <p className="card-text">{postData.notes}</p>
                         </div>
                         <div className="col-5 d-flex text-justify align-item-center">
-                            {/* { 
-                                The Learn More button should open a modal with the post details
-                                In that modal should be the link the user account
-                            
-                            } */}
-                            {/* <button className="btn-primary btn btn-sm d-flex align-self-end">
+                            <button
+                                className="btn-primary btn btn-sm d-flex align-self-end"
+                                onClick={() =>
+                                    this.props.detailsHandler(
+                                        this.props.postData
+                                    )
+                                }
+                            >
                                 Learn More
-                            </button> */}
-                            <button className="btn-primary btn btn-sm d-flex align-self-end">
-                                <Link
-                                    to={`/account/${
-                                        postData.requester_user_id ||
-                                        postData.offerer_uid
-                                    }`}
-                                    className="nav-link"
-                                >
-                                    Poster Account
-                                </Link>
                             </button>
                         </div>
                     </div>

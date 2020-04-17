@@ -9,7 +9,7 @@ class FormCategories extends React.Component {
                 </label>
                 <div className="dropdown">
                     <button
-                        className="btn-sm btn btn-outline-primary dropdown-toggle text-dark"
+                        className="btn-sm btn btn-outline-secondary dropdown-toggle text-dark"
                         type="button"
                         id="dropdown"
                         data-toggle="dropdown"

@@ -33,6 +33,7 @@ class OfferHelpPage extends React.Component {
         ]
 
         return (
+
             <div className="m-3">
                 <div className="card">
                     <div className="card-body">
