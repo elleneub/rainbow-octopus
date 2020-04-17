@@ -221,7 +221,7 @@ hr {
     border-radius: 5px;
     border: solid 1px $primary;
     padding: 20px;
-    font-size: 13px;
+    font-size: 14px;
 
     input {
         border: solid 1px $primary;
@@ -242,10 +242,15 @@ hr {
     border-radius: 5px;
     border: solid 1px $secondary;
     padding: 20px;
-    font-size: 13px;
+    font-size: 14px;
 
     .form-input {
         border: 1px solid $secondary;
+    }
+
+    input, textarea {
+        font-weight:300;
+        font-size: 14px;
     }
 }
 

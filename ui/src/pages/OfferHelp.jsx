@@ -31,7 +31,7 @@ class OfferHelpPage extends React.Component {
 
         return (
             <>
-            <h1 className="page-title">Offer Help</h1>
+            <h1 className="page-title">Offer to Help</h1>
             <div className="m-3">
                 <div className="card">
                     <div className="card-body">

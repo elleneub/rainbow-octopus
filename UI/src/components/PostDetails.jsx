@@ -19,9 +19,9 @@ class PostDetails extends React.Component {
         return (
             <div className="card post-details bg-light shadow-sm m-3 border-primary">
                 <div className="card-body text-inline">
-                    <h5 className="card-title font-weight-bold text-center">
+                    {/* <h5 className="card-title font-weight-bold text-center">
                         Request Details
-                    </h5>
+                    </h5> */}
                     <h6 className="card-title font-weight-bold text-left">
                         Person requesting help: {this.state.name}
                     </h6>
