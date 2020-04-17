@@ -49,13 +49,15 @@ class PostCardSection extends React.Component {
     render() {
         return (
             <div>
-                <FilterAndPostHeader
-                    changeFilterCategoryHandler={
-                        this.changeFilterCategoryHandler
-                    }
-                    changeLocationHandler={this.changeLocationHandler}
-                    postHandler={this.postHandler}
-                />
+                {this.props.hideFilterAndPost ? null : (
+                    <FilterAndPostHeader
+                        changeFilterCategoryHandler={
+                            this.changeFilterCategoryHandler
+                        }
+                        changeLocationHandler={this.changeLocationHandler}
+                        postHandler={this.postHandler}
+                    />
+                )}
                 <div className="card-deck mx-2 d-flex justify-content-center flex-wrap">
                     {this.props.posts.map((post) => {
                         return !this.state.categoryFilter ||

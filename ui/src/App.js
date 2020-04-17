@@ -81,7 +81,7 @@ class App extends React.Component {
                 <Route path="/guidelines" component={CommunityGuidelinesPage} />
                 <Route path="/demo" component={DemoPage} />
                 <Route path="/home" component={HomePage} />
-                <Route path="" component={DemoPage} />
+                <Route path="" component={HomePage} />
             </Switch>
         )
 
