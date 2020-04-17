@@ -33,15 +33,16 @@ class OfferHelpPage extends React.Component {
         ]
 
         return (
-
+            <>
+            <h1 className="page-title">Offer Help</h1>
             <div className="m-3">
                 <div className="card">
                     <div className="card-body">
-                        <h1 className="card-title">Offer Help</h1>
                         <PostCardSection posts={posts} />
                     </div>
                 </div>
-            </div>
+                </div>
+            </>
         )
     }
 }

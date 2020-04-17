@@ -49,7 +49,7 @@ class DemoPage extends React.Component {
         console.log('rendering demo page')
         return (
             <div className="demo-page">
-                <h1>Helper App</h1>
+                <h1 className="page-title">Helper App</h1>
                 <ButtonPrimary />
                 <ButtonSecondary />
                 {/* <ProfileCard /> */}

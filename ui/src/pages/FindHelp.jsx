@@ -33,14 +33,16 @@ class FindHelpPage extends React.Component {
         ]
 
         return (
-            <div className="m-3">
-                <div className="card">
-                    <div className="card-body">
-                        <h1 className="card-title">Find Help</h1>
-                        <PostCardSection posts={posts} />
+            <>
+                <h1 className="page-title">Find Help</h1>
+                <div className="m-3">
+                    <div className="card">
+                        <div className="card-body">
+                            <PostCardSection posts={posts} />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </>
         )
     }
 }
