@@ -10,13 +10,13 @@ class PostCard extends React.Component {
         return (
 
                 <div className="card-deck mx-2 d-flex justify-content-center flex-wrap">
-                <div className="card post-card bg-light shadow-sm m-3 border-primary">
+                <div className="card post-card bg-light shadow m-3 border-primary">
                     <div className="card-body text-inline">
                         <h5 className="card-title font-weight-bold text-left">
                             Groceries pick-up
                         </h5>
                         <p className="card-subtitle mb-2 text-muted text-left">
-                            NE Minneapolis
+                            Minneapolis, MN
                         </p>
 
                         <div className="row">
