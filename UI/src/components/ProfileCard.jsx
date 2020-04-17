@@ -70,14 +70,14 @@ class ProfileCard extends React.Component {
                         </div>
                     </div>
                     <div className="col-6">
-                        <h4 className="my-3">
+                        <h3>
                             {this.props.userData.firstName +
                                 ' ' +
                                 this.props.userData.lastName}
-                        </h4>
+                        </h3>
                         <h6 className="my-3">{this.props.userData.location}</h6>
                         <div className="social-icons">{socialSection}</div>
-                        <div className="payment">
+                        <div className="payment mb-3">
                             <h6>
                                 I accept:
                                 <ul className="col justify-content-around mt-1">
