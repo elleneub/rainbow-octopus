@@ -63,7 +63,7 @@ class AccountHistory extends React.Component {
             <div className="m-3">
                 <div className="card">
                     <div className="card-body">
-                        <h1 className="card-title">User Request History</h1>
+                        <h1 className="card-title">User Post History</h1>
                         {this.state.userRequestsAreLoading ||
                         this.state.userOffersAreLoading ? (
                             <div className="d-flex justify-content-center spinner">
@@ -77,6 +77,7 @@ class AccountHistory extends React.Component {
                                     ...this.state.userRequests,
                                     ...this.state.userOffers,
                                 ]}
+                                hideFilterAndPost={true}
                             />
                         )}
                     </div>
