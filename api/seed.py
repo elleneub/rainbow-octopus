@@ -3,7 +3,7 @@
 from datetime import datetime
 from faker import Faker
 import random
-from model import User, Address, Offer, Request
+from model import User, Address, Offer, Request, Category
 from server import app, configure_db, connect_to_db, db
 
 
@@ -21,7 +21,7 @@ def load_users(amount_to_generate):
     # we won't be trying to add duplicate users
     User.query.delete()
 
-    pronouns = 'they/them'
+
     for i in range(amount_to_generate):
         # Generate fake User information.
         #faker = Faker()
@@ -47,7 +47,6 @@ def load_users(amount_to_generate):
                     email=email,
                     created_on=datetime.today(),
                     modified_on=datetime.today(),
-                    pronouns=pronouns,
                     phone_number=phone_number)
         # Add the User object to the session so it will be stored.
         db.session.add(user)
@@ -62,7 +61,7 @@ def load_addresses(num_of_users):
     generated in load_users() - pass in the same number that you used to generate
     the users (i.e. num_of_users = num_to_gen)"""
 
-    # i = 0
+    i = 0
     user_id = 0
 
     for i in range(num_of_users):
@@ -91,8 +90,9 @@ def load_addresses(num_of_users):
                           country=country,
                           zipcode=zipcode                    
                           )
-        # i += 1
-        # Add the User object to the session so it will be stored.
+        i += 1
+
+        # Add the address instance to the session so it will be stored.
         db.session.add(address)
 
     # Once we're done inserting all the users, commit the changes to the 
@@ -148,7 +148,7 @@ def load_requests_offers(num_of_users, num_requests):
             i += 1
             # volunteer_index -+ 1
 
-            # Add the User object to the session so it will be stored.
+            # Add the request instance to the session so it will be stored.
             db.session.add(request)
 
         # Once we're done inserting all the users, commit the changes to the 
@@ -187,12 +187,34 @@ def load_requests_offers(num_of_users, num_requests):
                           description=description)
             j += 1
 
-            # Add the User object to the session so it will be stored.
+            # Add the offer instance to the session so it will be stored.
             db.session.add(offer)
 
-            # Once we're done inserting all the users, commit the changes to the 
-            # database
+        # Once we're done inserting all the offers, commit the changes to the 
+        # database
         db.session.commit()
+
+
+def load_categories():
+    """Function to load values for categories into the Category Table"""
+
+    CATEGORIES = {"Errands" : "Groceries, Other", 
+                  "Transportation" : "Appointments, Supplies", 
+                  "Light Housework" : "Laundry, Cleaning", 
+                  "Light Yard Work" : "Raking, Mowing", 
+                  "Heavy House / Yard Work" : "Assemply of furniture, repairs, etc."}
+    for key in CATEGORIES:
+        name = key
+        description = CATEGORIES[key]
+        new_category = Category(name=name, description=description)
+
+        # Add the Offer object to the session so it will be stored.
+        print("*** new_category = ", new_category)
+        db.session.add(new_category)
+
+    # Once we're done inserting all the categories, commit the changes to the 
+    # database
+    db.session.commit()
 
 
 def set_val_user_id():
@@ -227,13 +249,12 @@ if __name__ == "__main__":
 
     # In case tables haven't been created, create them
     db.create_all()
-
     num_to_gen = 9
     num_requests = 1
-    
     load_users(num_to_gen)
     load_addresses(num_to_gen)
     load_requests_offers(num_to_gen, num_requests)
+    load_categories()
 
     
     # set_val_user_id()
