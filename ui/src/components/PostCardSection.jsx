@@ -57,7 +57,7 @@ class PostCardSection extends React.Component {
                         changeLocationHandler={this.changeLocationHandler}
                         postHandler={this.postHandler}
                     />
-                    <div className="card-deck mx-2 d-flex justify-content-center flex-wrap">
+                    <div className="card-deck d-flex justify-content-center flex-wrap">
                         {this.props.posts.map((post) => {
                             return post.category.includes(
                                 this.state.categoryFilter
