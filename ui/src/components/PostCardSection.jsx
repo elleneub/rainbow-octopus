@@ -42,14 +42,14 @@ class PostCardSection extends React.Component {
         this.formRef.current.showModalForm()
     }
 
-    detailsHandler = () => {
-        this.detailsRef.current.showModalDetails()
+    detailsHandler = (postData) => {
+        this.detailsRef.current.showModalDetails(postData)
     }
 
     render() {
         return (
-            <>
-                <div>
+            <div>
+                {this.props.hideFilterAndPost ? null : (
                     <FilterAndPostHeader
                         changeFilterCategoryHandler={
                             this.changeFilterCategoryHandler
@@ -57,23 +57,24 @@ class PostCardSection extends React.Component {
                         changeLocationHandler={this.changeLocationHandler}
                         postHandler={this.postHandler}
                     />
-                    <div className="card-deck d-flex justify-content-center flex-wrap">
-                        {this.props.posts.map((post) => {
-                            return post.category.includes(
+                )}
+                <div className="card-deck mx-2 d-flex justify-content-center flex-wrap">
+                    {this.props.posts.map((post) => {
+                        return !this.state.categoryFilter ||
+                            post.categories.includes(
                                 this.state.categoryFilter
                             ) ? (
-                                    <PostCard
-                                        postData={post}
-                                        key={post.id}
-                                        detailsHandler={this.detailsHandler}
-                                    />
-                            ) : null
-                        })}
-                    </div>
+                            <PostCard
+                                postData={post}
+                                key={post.request_id || post.offer_id}
+                                detailsHandler={this.detailsHandler}
+                            />
+                        ) : null
+                    })}
                 </div>
                 <ModalForm ref={this.formRef} />
                 <ModalDetails ref={this.detailsRef} />
-            </>
+            </div>
         )
     }
 }
