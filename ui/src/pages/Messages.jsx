@@ -4,7 +4,7 @@ class MessagesPage extends React.Component {
     render() {
         return (
             <div>
-                <h1>Messages Page</h1>
+                <h1 className="page-title">Messages Page</h1>
             </div>
         )
     }

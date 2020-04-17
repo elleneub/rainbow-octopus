@@ -34,7 +34,7 @@ class FilterAndPostHeader extends React.Component {
                 </div>
                 <div className="col-sm-6 my-2 d-flex">
                     <button
-                        className="ml-sm-auto btn-secondary btn btn-sm"
+                        className="ml-sm-auto btn-secondary btn"
                         onClick={this.props.postHandler}
                     >
                         Post New Offer/Request
