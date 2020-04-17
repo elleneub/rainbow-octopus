@@ -9,7 +9,7 @@ import MessagesPage from './pages/Messages.jsx'
 import CommunityGuidelinesPage from './pages/CommunityGuidelines.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from 'components/Footer'
-// import axios from 'axios'
+import axios from 'axios'
 
 class App extends React.Component {
     constructor(props) {
@@ -18,66 +18,36 @@ class App extends React.Component {
             userData: {},
             isLoading: true,
         }
+        this.componentDidMount = this.componentDidMount.bind(this)
     }
 
     componentDidMount() {
-        // axios
-        //     .get(`https://fulfill-a-need.herokuapp.com/api/user/1`)
-        //     .then((res) => {
-        //         console.log('response', res)
-        //         // const response = JSON.parse(res)
-        //         this.setState({
-        //             userData: {
-        //                 firstName: 'Stevani',
-        //                 lastName: 'Burnside',
-        //                 image:
-        //                     'https://randomuser.me/api/portraits/women/79.jpg',
-        //                 location: 'Minneapolis, MN',
-        //                 social: {
-        //                     twitter: 'https://twitter.com/e_neub',
-        //                     facebook: 'https://www.facebook.com/elleneub',
-        //                 },
-        //                 paymentMethods: ['PayPay', 'Cash'],
-        //                 skills: [
-        //                     'Errands',
-        //                     'Transportation',
-        //                     'Light housework',
-        //                     'Light yardwork',
-        //                     'Heavy housework',
-        //                     'Heavy yardwork',
-        //                 ],
-        //             },
-        //             isLoading: false,
-        //         })
-        //     })
-        //     .catch((e) => {
-        //         console.log('error', e)
-        //     })
+        axios
+            .get(`https://fulfill-a-need.herokuapp.com/api/user/1`)
+            .then((res) => {
+                console.log('response', res.data)
+                res.data.image =
+                    'https://randomuser.me/api/portraits/women/79.jpg'
+                res.data.payment_option = ['PayPay', 'Cash']
+                res.data.skills = [
+                    'Errands',
+                    'Transportation',
+                    'Light housework',
+                    'Light yardwork',
+                    'Heavy housework',
+                    'Heavy yardwork',
+                ]
+                res.data.facebook_handle = 'https://www.facebook.com/elleneub'
+                res.data.twitter_handle = 'https://twitter.com/e_neub'
 
-        setTimeout(() => {
-            this.setState({
-                userData: {
-                    firstName: 'Stevani',
-                    lastName: 'Burnside',
-                    image: 'https://randomuser.me/api/portraits/women/79.jpg',
-                    location: 'Minneapolis, MN',
-                    social: {
-                        twitter: 'https://twitter.com/e_neub',
-                        facebook: 'https://www.facebook.com/elleneub',
-                    },
-                    paymentMethods: ['PayPay', 'Cash'],
-                    skills: [
-                        'Errands',
-                        'Transportation',
-                        'Light housework',
-                        'Light yardwork',
-                        'Heavy housework',
-                        'Heavy yardwork',
-                    ],
-                },
-                isLoading: false,
+                this.setState({
+                    userData: res.data,
+                    isLoading: false,
+                })
             })
-        }, 1000) // edit this to reduce spinner time
+            .catch((e) => {
+                console.log('error', e)
+            })
     }
 
     render() {

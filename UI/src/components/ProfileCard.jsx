@@ -7,14 +7,9 @@ import {
     faCcPaypal,
     faCcStripe,
 } from '@fortawesome/free-brands-svg-icons'
-import PostCard from './PostCard'
+// import PostCard from './PostCard'
 
 class ProfileCard extends React.Component {
-    socialIcons = {
-        twitter: faTwitter,
-        facebook: faFacebook,
-    }
-
     paymentIcons = {
         PayPay: faCcPaypal,
         Stripe: faCcStripe,
@@ -22,25 +17,40 @@ class ProfileCard extends React.Component {
     }
 
     render() {
-        const socialSection = Object.keys(this.props.userData.social).map(
-            (socialType) => {
-                return (
-                    <a
-                        // eslint-disable-next-line
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={this.props.userData.social[socialType]}
-                    >
-                        <FontAwesomeIcon
-                            icon={this.socialIcons[socialType]}
-                            className="social-icons"
-                        />
-                    </a>
-                )
-            }
+        const socialSection = []
+        socialSection.push(
+            this.props.userData.facebook_handle ? (
+                <a
+                    // eslint-disable-next-line
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={this.props.userData.facebook_handle}
+                >
+                    <FontAwesomeIcon
+                        icon={faFacebook}
+                        className="social-icons"
+                    />
+                </a>
+            ) : null
         )
 
-        const paymentSection = this.props.userData.paymentMethods.map(
+        socialSection.push(
+            this.props.userData.twitter_handle ? (
+                <a
+                    // eslint-disable-next-line
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={this.props.userData.twitter_handle}
+                >
+                    <FontAwesomeIcon
+                        icon={faTwitter}
+                        className="social-icons"
+                    />
+                </a>
+            ) : null
+        )
+
+        const paymentSection = this.props.userData.payment_option.map(
             (paymentType) => {
                 return (
                     <li>
@@ -64,16 +74,18 @@ class ProfileCard extends React.Component {
                     />
                     <div className="buttons my-3">
                         <button className="send-msg btn">
-                            Send {this.props.userData.firstName} a Message
+                            Send {this.props.userData.first_name} a Message
                         </button>
                     </div>
                     <div className="col-6">
                         <h4 className="my-3">
-                            {this.props.userData.firstName +
+                            {this.props.userData.first_name +
                                 ' ' +
-                                this.props.userData.lastName}
+                                this.props.userData.last_name}
                         </h4>
-                        <h6 className="my-3">{this.props.userData.location}</h6>
+                        <h6 className="my-3">
+                            {this.props.userData.addresses[0]}
+                        </h6>
                         <div className="social-icons">{socialSection}</div>
                         <div className="payment">
                             <h6>
@@ -99,12 +111,12 @@ class ProfileCard extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="container mt-4">
+                {/* <div className="container mt-4">
                     <h6 className="mx-1 text-center">
                         Stevani's History of Requests & Offers
                     </h6>
                     <PostCard postData={{}} />
-                </div>
+                </div> */}
             </div>
         )
     }
