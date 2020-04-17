@@ -57,8 +57,7 @@ class MyAccountPage extends React.Component {
         )
         return (
             <div>
-                <h1>My Account Page</h1>
-                <h2>{this.props.urlParam}</h2>
+                <h1 className="ml-5 mt-5">My Account Page</h1>
                 {this.props.urlParam && this.state.isLoading ? (
                     <div className="d-flex justify-content-center spinner">
                         <div className="spinner-border" role="status">
