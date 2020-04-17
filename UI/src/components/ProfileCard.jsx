@@ -17,14 +17,16 @@ class ProfileCard extends React.Component {
     }
 
     render() {
+        const data = this.props.userData
         const socialSection = []
         socialSection.push(
-            this.props.userData.facebook_handle ? (
+            data.facebook_handle ? (
                 <a
                     // eslint-disable-next-line
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={this.props.userData.facebook_handle}
+                    href={data.facebook_handle}
+                    key="facebook"
                 >
                     <FontAwesomeIcon
                         icon={faFacebook}
@@ -35,12 +37,13 @@ class ProfileCard extends React.Component {
         )
 
         socialSection.push(
-            this.props.userData.twitter_handle ? (
+            data.twitter_handle ? (
                 <a
                     // eslint-disable-next-line
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={this.props.userData.twitter_handle}
+                    href={data.twitter_handle}
+                    key="twitter"
                 >
                     <FontAwesomeIcon
                         icon={faTwitter}
@@ -50,41 +53,35 @@ class ProfileCard extends React.Component {
             ) : null
         )
 
-        const paymentSection = this.props.userData.payment_option.map(
-            (paymentType) => {
-                return (
-                    <li>
-                        <FontAwesomeIcon
-                            icon={this.paymentIcons[paymentType]}
-                            className="mx-2"
-                        />
-                        {paymentType}
-                    </li>
-                )
-            }
-        )
+        const paymentSection = data.payment_option.map((paymentType) => {
+            return (
+                <li key={paymentType}>
+                    <FontAwesomeIcon
+                        icon={this.paymentIcons[paymentType]}
+                        className="mx-2"
+                    />
+                    {paymentType}
+                </li>
+            )
+        })
 
         return (
-            <div className="row card-container profile-card-container m-0">
+            <div className="row card-container profile-card-container mx-auto">
                 <div className="col">
-                    <img
-                        className="round"
-                        src={this.props.userData.image}
-                        alt="user"
-                    />
+                    <img className="round" src={data.image} alt="user" />
                     <div className="buttons my-3">
                         <button className="send-msg btn">
-                            Send {this.props.userData.first_name} a Message
+                            Send {data.first_name} a Message
                         </button>
                     </div>
                     <div className="col-6">
                         <h4 className="my-3">
-                            {this.props.userData.first_name +
-                                ' ' +
-                                this.props.userData.last_name}
+                            {data.first_name + ' ' + data.last_name}
                         </h4>
                         <h6 className="my-3">
-                            {this.props.userData.addresses[0]}
+                            {data.addresses[0].city +
+                                ', ' +
+                                data.addresses[0].state}
                         </h6>
                         <div className="social-icons">{socialSection}</div>
                         <div className="payment">
@@ -104,19 +101,13 @@ class ProfileCard extends React.Component {
                                 I Can Help With:
                             </h5>
                             <ul>
-                                {this.props.userData.skills.map((skill) => {
-                                    return <li>{skill}</li>
+                                {data.skills.map((skill) => {
+                                    return <li key={skill}>{skill}</li>
                                 })}
                             </ul>
                         </div>
                     </div>
                 </div>
-                {/* <div className="container mt-4">
-                    <h6 className="mx-1 text-center">
-                        Stevani's History of Requests & Offers
-                    </h6>
-                    <PostCard postData={{}} />
-                </div> */}
             </div>
         )
     }
