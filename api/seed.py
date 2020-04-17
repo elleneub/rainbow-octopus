@@ -21,7 +21,7 @@ def load_users(amount_to_generate):
     # we won't be trying to add duplicate users
     User.query.delete()
 
-    pronouns = 'they/them'
+
     for i in range(amount_to_generate):
         # Generate fake User information.
         #faker = Faker()
@@ -47,7 +47,6 @@ def load_users(amount_to_generate):
                     email=email,
                     created_on=datetime.today(),
                     modified_on=datetime.today(),
-                    pronouns=pronouns,
                     phone_number=phone_number)
         # Add the User object to the session so it will be stored.
         db.session.add(user)
