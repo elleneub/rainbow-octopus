@@ -24,19 +24,25 @@ class PostCard extends React.Component {
                             <p className="card-text">{postData.notes}</p>
                         </div>
                         <div className="col-5 d-flex text-justify align-item-center">
-                            <button className="btn-primary btn btn-sm d-flex align-self-end">
+                            {/* { 
+                                The Learn More button should open a modal with the post details
+                                In that modal should be the link the user account
+                            
+                            } */}
+                            {/* <button className="btn-primary btn btn-sm d-flex align-self-end">
                                 Learn More
+                            </button> */}
+                            <button className="btn-primary btn btn-sm d-flex align-self-end">
+                                <Link
+                                    to={`/account/${
+                                        postData.requester_user_id ||
+                                        postData.offerer_uid
+                                    }`}
+                                    className="nav-link"
+                                >
+                                    Poster Account
+                                </Link>
                             </button>
-                            {/* { SHOULD NOT LIVE HERE: JUST FOR DEMO} */}
-                            <Link
-                                to={`/account/${
-                                    postData.requester_user_id ||
-                                    postData.offerer_uid
-                                }`}
-                                className="nav-link"
-                            >
-                                Poster Account
-                            </Link>
                         </div>
                     </div>
                 </div>
