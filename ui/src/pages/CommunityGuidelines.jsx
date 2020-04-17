@@ -4,7 +4,7 @@ class CommunityGuidelinesPage extends React.Component {
     render() {
         return (
             <div>
-                <h1>Community Guidelines</h1>
+                <h1 className="page-title">Community Guidelines</h1>
             </div>
         )
     }
