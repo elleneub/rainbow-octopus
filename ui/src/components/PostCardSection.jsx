@@ -1,6 +1,7 @@
 import React from 'react'
 import PostCard from './PostCard'
 import FilterAndPostHeader from 'components/FilterAndPostHeader'
+import Modal from 'components/Modal'
 
 class PostCardSection extends React.Component {
     constructor(props) {
@@ -8,12 +9,14 @@ class PostCardSection extends React.Component {
         this.state = {
             categoryFilter: '',
             locationFilter: '',
+            show: false
         }
         this.changeFilterCategoryHandler = this.changeFilterCategoryHandler.bind(
             this
         )
         this.changeLocationHandler = this.changeLocationHandler.bind(this)
         this.postHandler = this.postHandler.bind(this)
+        this.child = React.createRef()
     }
 
     changeFilterCategoryHandler(e) {
@@ -33,11 +36,13 @@ class PostCardSection extends React.Component {
     }
 
     postHandler() {
-        alert('Implement creating a new posting')
+        // alert('Implement creating a new posting')
+        this.child.current.showModal()
     }
 
     render() {
         return (
+            <>
             <div>
                 <FilterAndPostHeader
                     changeFilterCategoryHandler={
@@ -56,6 +61,8 @@ class PostCardSection extends React.Component {
                     })}
                 </div>
             </div>
+                <Modal ref={this.child} />
+            </>
         )
     }
 }
