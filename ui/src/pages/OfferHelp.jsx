@@ -30,15 +30,16 @@ class OfferHelpPage extends React.Component {
         ]
 
         return (
-
+            <>
+            <h1 className="text-center page-title">Offer Help</h1>
             <div className="m-3">
                 <div className="card">
                     <div className="card-body">
-                        <h1 className="card-title">Offer Help</h1>
                         <PostCardSection posts={posts} />
                     </div>
                 </div>
-            </div>
+                </div>
+            </>
         )
     }
 }
