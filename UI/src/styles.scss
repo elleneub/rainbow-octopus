@@ -2,11 +2,6 @@
 
 body {
     margin: 0;
-    // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    //     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    //     'Helvetica Neue', sans-serif;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
     font-family: $sans;
     font-weight: 300;
     letter-spacing: .5px;
@@ -53,14 +48,13 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0px 5px 20px -10px rgb(49, 49, 49);
 }
 
-// PROFILE CARD
+// MODAL
 
-// .profile-card {
-//     background-color: $primary;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
+.modal-footer a {
+    color: white;
+}
+
+// PROFILE CARD
 
 .profile-card-container {
     background-color: $primary;
@@ -105,29 +99,6 @@ button.send-msg {
     color: white;
     font-size: 30px;
 }
-
-// .skills {
-//     background-color: $primary;
-//     text-align: left;
-//     padding: 5px;
-// }
-
-// .skills ul {
-//     list-style-type: none;
-//     margin: 0;
-//     padding: 0;
-// }
-
-// .skills ul li {
-//     background-color: $success;
-//     border: 1px solid $success;
-//     border-radius: 3px;
-//     display: inline-block;
-//     font-size: 13px; // Specify font size?
-//     margin: 0 7px 7px 0;
-//     padding: 7px;
-//     list-style-type: none;
-// }
 
 // POST CARDS
 
@@ -249,6 +220,7 @@ button.send-msg {
         font-size: 14px;
     }
 }
+
 
 .form-check {
     border: 1px solid #dee2e6;

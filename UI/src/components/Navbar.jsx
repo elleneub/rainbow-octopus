@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link to="/home" className="navbar-brand">
+                <Link to="/" className="navbar-brand">
                     <img src={logo} width="50" height="50" alt="" />
                 </Link>
                 <button
@@ -25,7 +25,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <Link to="/home" className="nav-link">
+                            <Link to="/" className="nav-link">
                                 Home
                             </Link>
                             {/* <span className="sr-only">(current)</span> */}
@@ -41,7 +41,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/account" className="nav-link">
+                            <Link to="/account/1" className="nav-link">
                                 My Account
                             </Link>
                         </li>
@@ -55,11 +55,11 @@ const Navbar = () => {
                                 Community Guidelines
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to="/demo" className="nav-link">
                                 Demo
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link to="/" className="nav-link">
                                 Sign Out

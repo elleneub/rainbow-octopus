@@ -14,6 +14,8 @@ class PostDetails extends React.Component {
             expiration: 'Monday May 4, 2020',
             recurring: false,
         }
+        // Should be switched to use API data
+        // this.props.postData
     }
     render() {
         return (
@@ -50,9 +52,9 @@ class PostDetails extends React.Component {
                         <button className="btn-primary btn btn-sm d-flex align-self-end mr-2">
                             Contact Neighbor
                         </button>
-                       </div>
-                    </div> 
+                    </div>
                 </div>
+            </div>
             //
         )
     }
