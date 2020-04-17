@@ -3,7 +3,7 @@ import React from 'react';
 class ProfileCategories extends React.Component {
     render() {
         return (
-            <div className="form-group mt-4">
+            <div className="form-group mt-4 border border-primary bg-white p-2 rounded">
                 <label for="categories">
                     What help can you offer (if any)?<br></br>
                 </label>

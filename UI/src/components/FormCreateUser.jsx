@@ -5,8 +5,7 @@ import ProfileCategories from './ProfileCategories'
 class FormCreateUser extends React.Component {
     render() {
         return (
-            <div className="container form bg-light">
-                <h5>Create Your Profile</h5>
+            <div className="container form">
                 <div className="form-group">
                     <label for="name-input">Name</label>
                     <input

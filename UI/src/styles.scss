@@ -15,8 +15,8 @@ code {
         monospace;
 }
 
-h1, h2, h4 {
-    font-family: $lobster;
+h1, h2, h4, h5 {
+    font-family: $patua;
 }
 
 // SPINNER
@@ -30,11 +30,11 @@ h1, h2, h4 {
 
 .page-title {
     background: $success;
-    font-family: $lobster;
+    font-family: $patua;
     color: $light;
     padding: 10px;
     text-align: center;
-    // font-size: 28px;
+}
 
 // BUTTONS
 
@@ -156,9 +156,9 @@ hr {
 
 .form {
     border-radius: 5px;
-    border: solid 1px $primary;
+    // border: solid 1px $primary;
     padding: 20px;
-    font-size: 13px;
+    font-size: 16px;
 
     input {
         border: solid 1px $primary;
@@ -174,16 +174,18 @@ hr {
         font-size: 13px;
     }
 
-    .form-check {
-        border: 1px solid $primary;
-        border-radius: 5px;
-        padding: 3px;
-        margin: 4px;
-    }
-    
 }
 
+.form-check {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 3px;
+        margin: 5px;
+        font-size: 14px;
+    }
+
 .form-check-inline {
-    margin-right: 2em;
+    margin-right: 5px;
 }
-}
+
+
