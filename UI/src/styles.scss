@@ -17,7 +17,7 @@ code {
         monospace;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 // SPINNER
@@ -55,12 +55,12 @@ h1, h2, h3, h4, h5 {
 
 // PROFILE CARD
 
-.profile-card {
-    background-color: $primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+// .profile-card {
+//     background-color: $primary;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
 
 .profile-card-container {
     background-color: $primary;
@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     display: flex;
     justify-content: center;
+    font-weight:300;
 }
 
 .profile-card-container .round {
@@ -105,33 +106,28 @@ button.send-msg {
     font-size: 30px;
 }
 
-hr {
-    border-color: white;
-    margin: 0;
-}
+// .skills {
+//     background-color: $primary;
+//     text-align: left;
+//     padding: 5px;
+// }
 
-.skills {
-    background-color: $primary;
-    text-align: left;
-    padding: 5px;
-}
+// .skills ul {
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+// }
 
-.skills ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.skills ul li {
-    background-color: $success;
-    border: 1px solid $success;
-    border-radius: 3px;
-    display: inline-block;
-    font-size: 13px; // Specify font size?
-    margin: 0 7px 7px 0;
-    padding: 7px;
-    list-style-type: none;
-}
+// .skills ul li {
+//     background-color: $success;
+//     border: 1px solid $success;
+//     border-radius: 3px;
+//     display: inline-block;
+//     font-size: 13px; // Specify font size?
+//     margin: 0 7px 7px 0;
+//     padding: 7px;
+//     list-style-type: none;
+// }
 
 // POST CARDS
 

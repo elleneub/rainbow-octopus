@@ -55,17 +55,19 @@ class ProfileCard extends React.Component {
         )
 
         return (
-            <div className="row card-container profile-card-container m-0">
-                <div className="col">
-                    <img
-                        className="round"
-                        src={this.props.userData.image}
-                        alt="user"
-                    />
-                    <div className="buttons my-3">
-                        <button className="send-msg btn">
-                            Send {this.props.userData.firstName} a Message
-                        </button>
+            <>
+                <div className="row profile-card-container m-0">
+                    <div className="col">
+                        <img
+                            className="round"
+                            src={this.props.userData.image}
+                            alt="user"
+                        />
+                        <div className="buttons my-3">
+                            <button className="send-msg btn">
+                                Send {this.props.userData.firstName} a Message
+                            </button>
+                        </div>
                     </div>
                     <div className="col-6">
                         <h4 className="my-3">
@@ -84,28 +86,14 @@ class ProfileCard extends React.Component {
                             </h6>
                         </div>
                     </div>
-
-                    <div className="col">
-                        <hr></hr>
-                        <div className="skills">
-                            <h5 className="text-center m-3">
-                                I Can Help With:
-                            </h5>
-                            <ul>
-                                {this.props.userData.skills.map((skill) => {
-                                    return <li>{skill}</li>
-                                })}
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-                <div className="container mt-4">
+                {/* <div className="container mt-4">
                     <h6 className="mx-1 text-center">
                         Stevani's History of Requests & Offers
                     </h6>
                     <PostCard postData={{}} />
-                </div>
-            </div>
+                </div> */}
+            </>
         )
     }
 }

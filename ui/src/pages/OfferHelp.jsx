@@ -10,14 +10,14 @@ class OfferHelpPage extends React.Component {
                 location: 'NE Minneapolis',
                 category: 'Light Yard Work',
                 description:
-                    'I need someone to pick up my groceries because I live alone and have a compromised immune system.',
+                    'I need someone to pick up my groceries. I live alone and have a compromised immune system.',
             },
             {
                 id: '1',
-                title: 'Need Help Picking Up Heavy Thing',
+                title: 'Need Help Moving Heavy Boxes',
                 location: 'Cedar/Riverside',
                 category: 'Heavy Yard Work',
-                description: 'I need someone to pick up my heavy thing.',
+                description: 'I have about 20-30 boxes I need to move to my attic over the next week.',
             },
             {
                 id: '2',

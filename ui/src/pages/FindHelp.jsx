@@ -10,14 +10,14 @@ class FindHelpPage extends React.Component {
                 location: 'NE Minneapolis',
                 category: 'Light Yard Work',
                 description:
-                    'I have a car and am frequently out and about. I can pick up small items',
+                    'I have a car and am frequently out and about. I can pick up small items.',
             },
             {
                 id: '1',
-                title: 'Need Help Picking Up Heavy Thing',
+                title: 'I can help with heavy lifting/manual labor',
                 location: 'Cedar/Riverside',
                 category: 'Heavy Yard Work',
-                description: 'I like lifting heavy stuff',
+                description: 'I am happy to help with more difficult yard tasks, and I can assist with household repairs.'
             },
             {
                 id: '2',
