@@ -45,7 +45,6 @@ class ModalDetails extends React.Component {
                                     postData.requester_user_id ||
                                     postData.offerer_uid
                                 }`}
-                                className="nav-link"
                             >
                                 Poster Account
                             </Link>

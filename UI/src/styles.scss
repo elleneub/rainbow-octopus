@@ -32,6 +32,12 @@ code {
     box-shadow: 0px 5px 20px -10px rgb(49, 49, 49);
 }
 
+// MODAL
+
+.modal-footer a {
+    color: white;
+}
+
 // PROFILE CARD
 
 .profile-card {
@@ -120,10 +126,6 @@ hr {
 
     p {
         font-size: 14px;
-    }
-
-    a {
-        color: white;
     }
 }
 
@@ -226,7 +228,6 @@ hr {
     .form-input {
         border: 1px solid $secondary;
     }
-
 }
 
 .form-check-inline {
