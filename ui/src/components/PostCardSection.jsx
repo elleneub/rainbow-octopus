@@ -1,9 +1,8 @@
 import React from 'react'
 import PostCard from './PostCard'
 import FilterAndPostHeader from 'components/FilterAndPostHeader'
-// import Modal from 'components/Modal'
+import ModalDetails from 'components/ModalDetails'
 import ModalForm from 'components/ModalForm'
-
 
 class PostCardSection extends React.Component {
     constructor(props) {
@@ -18,6 +17,7 @@ class PostCardSection extends React.Component {
         )
         this.changeLocationHandler = this.changeLocationHandler.bind(this)
         this.postHandler = this.postHandler.bind(this)
+        this.detailsHandler = this.detailsHandler.bind(this)
         this.formRef = React.createRef()
         this.detailsRef = React.createRef()
     }
@@ -62,13 +62,17 @@ class PostCardSection extends React.Component {
                             return post.category.includes(
                                 this.state.categoryFilter
                             ) ? (
-                                <PostCard postData={post} key={post.id} />
+                                    <PostCard
+                                        postData={post}
+                                        key={post.id}
+                                        detailsHandler={this.detailsHandler}
+                                    />
                             ) : null
                         })}
                     </div>
                 </div>
                 <ModalForm ref={this.formRef} />
-                {/* <ModalDetails ref={this.detailsRef} /> */}
+                <ModalDetails ref={this.detailsRef} />
             </>
         )
     }
