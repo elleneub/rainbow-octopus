@@ -48,15 +48,12 @@ class PostDetails extends React.Component {
                     </p>
                     <div className="row px-3">
                         <button className="btn-primary btn btn-sm d-flex align-self-end mr-2">
-                            Contact {this.state.name}
+                            Contact Neighbor
                         </button>
-                        <button className="btn-outline-primary btn btn-sm d-flex align-self-end mt-2">
-                            Back to List
-                        </button>
-                        {/* <a href="/" className="mt-5">Back to List</a> */}
-                    </div>
+                       </div>
+                    </div> 
                 </div>
-            </div>
+            //
         )
     }
 }
