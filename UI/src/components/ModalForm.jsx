@@ -22,8 +22,11 @@ class ModalForm extends React.Component {
                     show={this.state.show}
                     onHide={() => this.setState({ show: false })}
                 >
-                    <Modal.Header closeButton>
-                        <Modal.Title>Title</Modal.Title>
+                    <Modal.Header
+                        className="bg-secondary text-white"
+                        closeButton
+                    >
+                        <Modal.Title>Post a Request or Offer</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Form />

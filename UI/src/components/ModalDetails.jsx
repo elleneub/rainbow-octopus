@@ -22,7 +22,7 @@ class ModalDetails extends React.Component {
                     show={this.state.show}
                     onHide={() => this.setState({ show: false })}
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header className="bg-primary" closeButton>
                         <Modal.Title>Details</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -30,17 +30,17 @@ class ModalDetails extends React.Component {
                     </Modal.Body>
                     <Modal.Footer>
                         <Button
-                            variant="outline-secondary"
+                            variant="outline-primary"
                             onClick={() => this.setState({ show: false })}
                         >
-                            Close
+                            Back to List
                         </Button>
-                        <Button
+                        {/* <Button
                             variant="primary"
                             // onClick={}
                         >
-                            Submit
-                        </Button>
+                            Contact Neighbor
+                        </Button> */}
                     </Modal.Footer>
                 </Modal>
             </div>

@@ -4,16 +4,16 @@ import Button from 'react-bootstrap/Button'
 
 class ModalComp extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
-            show: false
+            show: false,
         }
     }
 
     showModal() {
-        this.setState({show: true})
+        this.setState({ show: true })
     }
-    
+
     render() {
         return (
             <div className="row m-auto">
@@ -35,7 +35,7 @@ class ModalComp extends React.Component {
                             Close
                         </Button>
                         <Button
-                            variant="primary"
+                            variant="secondary"
                             // onClick={}
                         >
                             Submit
