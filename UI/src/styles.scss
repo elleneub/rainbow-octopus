@@ -213,6 +213,18 @@ hr {
     }
 }
 
+.form-requestoffer {
+    border-radius: 5px;
+    border: solid 1px $secondary;
+    padding: 20px;
+    font-size: 13px;
+
+    .form-input {
+        border: 1px solid $secondary;
+    }
+
+}
+
 .form-check-inline {
     margin-right: 2em;
 }

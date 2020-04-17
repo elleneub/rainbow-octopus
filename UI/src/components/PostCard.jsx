@@ -24,7 +24,10 @@ class PostCard extends React.Component {
                             </p>
                         </div>
                         <div className="col-5 d-flex text-justify align-item-center">
-                            <button className="btn-primary btn btn-sm d-flex align-self-end">
+                            <button
+                                className="btn-primary btn btn-sm d-flex align-self-end"
+                                onClick={this.props.detailsHandler}
+                            >
                                 Learn More
                             </button>
                         </div>
