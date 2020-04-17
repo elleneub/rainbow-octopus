@@ -17,13 +17,15 @@ class App extends React.Component {
         this.state = {
             userData: {},
             isLoading: true,
+            userId: null,
         }
         this.componentDidMount = this.componentDidMount.bind(this)
     }
 
     componentDidMount() {
+        const userId = 1
         axios
-            .get(`https://fulfill-a-need.herokuapp.com/api/user/2`)
+            .get(`https://fulfill-a-need.herokuapp.com/api/user/${userId}`)
             .then((res) => {
                 console.log('response', res.data)
                 // Fake out a bunch of data that's not yet in the API
@@ -43,6 +45,7 @@ class App extends React.Component {
 
                 this.setState({
                     userData: res.data,
+                    userId: userId,
                     isLoading: false,
                 })
             })
@@ -60,29 +63,25 @@ class App extends React.Component {
             </div>
         ) : (
             <Switch>
-                <Route exact path="/offerHelp" component={OfferHelpPage} />
-                <Route exact path="/findHelp" component={FindHelpPage} />
-                <Route exact path="/messages" component={MessagesPage} />
+                <Route path="/offerHelp" component={OfferHelpPage} />
+                <Route path="/findHelp" component={FindHelpPage} />
+                <Route path="/messages" component={MessagesPage} />
                 <Route
-                    exact
-                    path="/account"
-                    render={() => {
+                    path="/account/:categoryName"
+                    render={(props) => {
                         return (
                             <MyAccountPage
                                 userData={this.state.userData}
-                                userId={2}
+                                userId={this.state.userId}
+                                urlParam={props.match.params.categoryName}
                             />
                         )
                     }}
                 />
-                <Route
-                    exact
-                    path="/guidelines"
-                    component={CommunityGuidelinesPage}
-                />
-                <Route exact path="/demo" component={DemoPage} />
-                <Route exact path="/home" component={HomePage} />
-                <Route exact path="" component={DemoPage} />
+                <Route path="/guidelines" component={CommunityGuidelinesPage} />
+                <Route path="/demo" component={DemoPage} />
+                <Route path="/home" component={HomePage} />
+                <Route path="" component={DemoPage} />
             </Switch>
         )
 

@@ -9,6 +9,7 @@ class FindHelpPage extends React.Component {
                 title: 'Can help pick-up Stuff',
                 location: 'NE Minneapolis',
                 categories: ['Light Yard Work'],
+                offerer_uid: 3,
                 notes:
                     'I have a car and am frequently out and about. I can pick up small items',
             },
@@ -17,6 +18,7 @@ class FindHelpPage extends React.Component {
                 title: 'Can Help Picking Up Heavy Things',
                 location: 'Cedar/Riverside',
                 categories: ['Heavy Yard Work'],
+                offerer_uid: 2,
                 notes: 'I like lifting heavy stuff',
             },
             {
@@ -24,6 +26,7 @@ class FindHelpPage extends React.Component {
                 title: 'I make masks',
                 location: 'South Minneapolis',
                 categories: ['Sewing'],
+                offerer_uid: 5,
                 notes:
                     'I know how to sew and am able to make a bunch of cloth masks, if anyone would like one.',
             },
