@@ -186,7 +186,7 @@ class Offer(db.Model):
 
     offers_requested = db.relationship("Offer_Requested", 
                                         backref=db.backref("offers"))
-    offer_categories = db.relationship('Category',secondary=offer_categories)
+    categories = db.relationship('Category',secondary=offer_categories)
 
 
     def __repr__(self):
@@ -207,7 +207,7 @@ class Offer(db.Model):
         if self.expiration_date is not None:
             json_dict['expiration_date'] = self.expiration_date.strftime('%b %d, %Y %H:%M:%S')
         json_dict['modified_on'] = self.modified_on.strftime('%b %d, %Y %H:%M:%S')
-        json_dict['offer_categories'] = [category.to_dict_for_json for category in self.offer_categories]
+        json_dict['categories'] = [category.to_dict_for_json for category in self.categories]
 
         return json_dict
 
@@ -244,7 +244,7 @@ class Request(db.Model):
     service_needed_at = db.Column(db.Integer, db.ForeignKey("addresses.address_id"),
                                   nullable=True)
 
-    request_categories = db.relationship('Category',secondary=request_categories)
+    categories = db.relationship('Category',secondary=request_categories)
 
     def __repr__(self):
         return f"""<Request request_id={self.request_id}
@@ -266,7 +266,7 @@ class Request(db.Model):
         json_dict['fulfilled'] = self.fulfilled
         json_dict['created_on'] = self.created_on.strftime('%b %d, %Y %H:%M:%S')
         json_dict['modified_on'] = self.modified_on.strftime('%b %d, %Y %H:%M:%S')
-        json_dict['request_categories'] = [category.to_dict_for_json for category in self.request_categories]
+        json_dict['categories'] = [category.to_dict_for_json for category in self.categories]
 
         return json_dict
 

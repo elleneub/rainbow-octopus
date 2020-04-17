@@ -79,6 +79,7 @@ def create_update_request():
     volunteer_user_id = content['volunteer_user_id']
     notes = content['notes']
     fulfilled = content['fulfilled']
+    category_names = content['categories']
 
     # figure out address stuff later
     request_args = {
@@ -97,6 +98,10 @@ def create_update_request():
         request_args['volunteer_user_id'] = volunteer_user_id
 
     app_request = App_Request(**request_args)
+
+    for category_name in category_names:
+        request_category = Category.query.filter_by(name=category_name).first()
+        app_request.categories.append(request_category)
 
     db.session.add(app_request)
     db.session.commit()
@@ -145,6 +150,7 @@ def create_update_offer():
     expiration_date = content['expiration_date']
     recurring = content['recurring']
     description = content['description']
+    category_names = content['categories']
 
     offer_args = {
         'offerer_uid': offerer_uid,
@@ -161,6 +167,11 @@ def create_update_offer():
         offer_args['expiration_date'] = expiration_date
 
     offer = Offer(**offer_args)
+
+    for category_name in category_names:
+        offer_category = Category.query.filter_by(name=category_name).first()
+        offer.categories.append(offer_category)
+
 
     db.session.add(offer)
     db.session.commit()
