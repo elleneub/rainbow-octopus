@@ -23,11 +23,12 @@ class App extends React.Component {
 
     componentDidMount() {
         axios
-            .get(`https://fulfill-a-need.herokuapp.com/api/user/1`)
+            .get(`https://fulfill-a-need.herokuapp.com/api/user/2`)
             .then((res) => {
                 console.log('response', res.data)
-                res.data.image =
-                    'https://randomuser.me/api/portraits/women/79.jpg'
+                // Fake out a bunch of data that's not yet in the API
+                const randomNum = Math.floor(Math.random() * 99) + 1
+                res.data.image = `https://randomuser.me/api/portraits/women/${randomNum}.jpg`
                 res.data.payment_option = ['PayPay', 'Cash']
                 res.data.skills = [
                     'Errands',
