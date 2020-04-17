@@ -20,7 +20,7 @@ class PostCard extends React.Component {
                     <div className="row">
                         <div className="col-7 text-left">
                             <p className="card-text">
-                                {this.props.postData.description}
+                                {this.props.postData.notes}
                             </p>
                         </div>
                         <div className="col-5 d-flex text-justify align-item-center">

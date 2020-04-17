@@ -8,23 +8,23 @@ class FindHelpPage extends React.Component {
                 id: '0',
                 title: 'Can help pick-up Stuff',
                 location: 'NE Minneapolis',
-                category: 'Light Yard Work',
-                description:
+                categories: ['Light Yard Work'],
+                notes:
                     'I have a car and am frequently out and about. I can pick up small items',
             },
             {
                 id: '1',
-                title: 'Need Help Picking Up Heavy Thing',
+                title: 'Can Help Picking Up Heavy Things',
                 location: 'Cedar/Riverside',
-                category: 'Heavy Yard Work',
-                description: 'I like lifting heavy stuff',
+                categories: ['Heavy Yard Work'],
+                notes: 'I like lifting heavy stuff',
             },
             {
                 id: '2',
                 title: 'I make masks',
                 location: 'South Minneapolis',
-                category: 'Sewing',
-                description:
+                categories: ['Sewing'],
+                notes:
                     'I know how to sew and am able to make a bunch of cloth masks, if anyone would like one.',
             },
         ]

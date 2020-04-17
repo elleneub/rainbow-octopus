@@ -26,6 +26,7 @@ class ProfileCard extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={data.facebook_handle}
+                    key="facebook"
                 >
                     <FontAwesomeIcon
                         icon={faFacebook}
@@ -42,6 +43,7 @@ class ProfileCard extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={data.twitter_handle}
+                    key="twitter"
                 >
                     <FontAwesomeIcon
                         icon={faTwitter}
@@ -53,7 +55,7 @@ class ProfileCard extends React.Component {
 
         const paymentSection = data.payment_option.map((paymentType) => {
             return (
-                <li>
+                <li key={paymentType}>
                     <FontAwesomeIcon
                         icon={this.paymentIcons[paymentType]}
                         className="mx-2"
@@ -100,18 +102,12 @@ class ProfileCard extends React.Component {
                             </h5>
                             <ul>
                                 {data.skills.map((skill) => {
-                                    return <li>{skill}</li>
+                                    return <li key={skill}>{skill}</li>
                                 })}
                             </ul>
                         </div>
                     </div>
                 </div>
-                {/* <div className="container mt-4">
-                    <h6 className="mx-1 text-center">
-                        Stevani's History of Requests & Offers
-                    </h6>
-                    <PostCard postData={{}} />
-                </div> */}
             </div>
         )
     }

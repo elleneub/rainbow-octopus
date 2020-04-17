@@ -48,10 +48,14 @@ class PostCardSection extends React.Component {
                 />
                 <div className="card-deck mx-2 d-flex justify-content-center flex-wrap">
                     {this.props.posts.map((post) => {
-                        return post.category.includes(
-                            this.state.categoryFilter
-                        ) ? (
-                            <PostCard postData={post} key={post.id} />
+                        return !this.state.categoryFilter ||
+                            post.categories.includes(
+                                this.state.categoryFilter
+                            ) ? (
+                            <PostCard
+                                postData={post}
+                                key={post.request_id || post.offer_id}
+                            />
                         ) : null
                     })}
                 </div>

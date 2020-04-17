@@ -67,7 +67,12 @@ class App extends React.Component {
                     exact
                     path="/account"
                     render={() => {
-                        return <MyAccountPage userData={this.state.userData} />
+                        return (
+                            <MyAccountPage
+                                userData={this.state.userData}
+                                userId={2}
+                            />
+                        )
                     }}
                 />
                 <Route
