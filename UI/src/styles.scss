@@ -9,7 +9,7 @@ body {
     // -moz-osx-font-smoothing: grayscale;
     font-family: $sans;
     font-weight: 300;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 code {
@@ -17,7 +17,11 @@ code {
         monospace;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: 300;
 }
 // SPINNER
@@ -33,7 +37,7 @@ h1, h2, h3, h4, h5 {
     padding: 5px;
     font-size: 34px;
     letter-spacing: 1px;
-    text-align: center; 
+    text-align: center;
 }
 // BUTTONS
 
@@ -254,14 +258,15 @@ hr {
         border: 1px solid $secondary;
     }
 
-.form-check {
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 5px;
-    font-size: 14px;
-}
+    .form-check {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 3px;
+        margin: 5px;
+        font-size: 14px;
+    }
 
-.form-check-inline {
-    margin-right: 5px;
+    .form-check-inline {
+        margin-right: 5px;
+    }
 }
