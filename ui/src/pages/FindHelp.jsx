@@ -19,7 +19,7 @@ class FindHelpPage extends React.Component {
                 location: 'Cedar/Riverside',
                 categories: ['Heavy Yard Work'],
                 offerer_uid: 2,
-                notes: 'I like lifting heavy stuff',
+                notes: 'I can help with laborous tasks in your home or outside work.',
             },
             {
                 id: '2',
@@ -28,7 +28,7 @@ class FindHelpPage extends React.Component {
                 categories: ['Sewing'],
                 offerer_uid: 5,
                 notes:
-                    'I know how to sew and am able to make a bunch of cloth masks, if anyone would like one.',
+                    'I know how to sew and am able to make a bunch of cloth masks, if anyone needs one.',
             },
         ]
 

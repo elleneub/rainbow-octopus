@@ -39,7 +39,7 @@ class OfferHelpPage extends React.Component {
                 location: 'Cedar/Riverside',
                 categories: ['Heavy Yard Work'],
                 requester_user_id: 2,
-                notes: 'I need someone to pick up my heavy thing.',
+                notes: 'I need someone help me move about 20-30 heavy boxes into my attic.',
             },
             {
                 id: '2',
