@@ -12,13 +12,11 @@ code {
         monospace;
 }
 
-
 h1,
 h2,
 h3,
 h4,
 h5 {
-
     font-weight: 300;
 }
 // SPINNER
@@ -74,7 +72,7 @@ h5 {
     text-align: center;
     display: flex;
     justify-content: center;
-    font-weight:300;
+    font-weight: 300;
 }
 
 .profile-card-container .round {
@@ -224,12 +222,12 @@ ul {
         border: 1px solid $secondary;
     }
 
-    input, textarea {
-        font-weight:300;
+    input,
+    textarea {
+        font-weight: 300;
         font-size: 14px;
     }
 }
-
 
 .form-check {
     border: 1px solid #dee2e6;
@@ -239,7 +237,29 @@ ul {
     font-size: 14px;
 }
 
-
 .form-check-inline {
-        margin-right: 5px;
+    margin-right: 5px;
+}
+
+// MESSAGES
+
+.media {
+    border: 1px lightgray;
+}
+.media-color {
+    background-color: rgba(221, 124, 107, 0.432)
+}
+
+
+.search-bar {
+    display: block;
+    padding: 4px 4px;
+    margin: 5px;
+    border: 1px solid $primary;
+    border-radius: 25px;
+
+        h6 {
+            padding-left: 10px;
+            padding-top: 5px;
+        }
 }
