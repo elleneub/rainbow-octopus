@@ -23,7 +23,6 @@ class MessagesPage extends React.Component {
             <div className="spce">
             <div>
                 <h1 className="page-title">Messages</h1>
-
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="search-bar mx-5">
@@ -84,6 +83,7 @@ class MessagesPage extends React.Component {
                                 piracy Nelsons folly jib wench log chase
                                 gun...
                             </p>
+
                         </div>
                     </div>
                 </div>
