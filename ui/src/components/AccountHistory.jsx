@@ -61,9 +61,9 @@ class AccountHistory extends React.Component {
     render() {
         return (
             <div className="m-3">
-                <div className="card">
+                <div className="card border-white">
                     <div className="card-body">
-                        <h1 className="card-title">User Post History</h1>
+                        <h4 className="card-title history-title">User Post History</h4>
                         {this.state.userRequestsAreLoading ||
                         this.state.userOffersAreLoading ? (
                             <div className="d-flex justify-content-center spinner">
