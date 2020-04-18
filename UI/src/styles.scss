@@ -98,6 +98,10 @@ button.send-msg {
     color: $success;
     margin-left: 5px;
     margin-right: 5px;
+
+    :hover {
+        opacity: .90;
+    }
 }
 
 .payment {
@@ -323,6 +327,13 @@ ul {
 
 }
 
+.subtitle {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
 
 // MAP
 
@@ -343,4 +354,9 @@ ul {
 // CHAT
 .space {
     height: 100px;
+}
+
+// TINY SECTIONS
+.spce {
+    height: 100vh;
 }
