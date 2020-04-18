@@ -35,7 +35,7 @@ class PostCardSection extends React.Component {
         this.setState({
             locationFilter: location,
         })
-        alert('Implement filtering on location')
+        // alert('Implement filtering on location')
     }
 
     postHandler = () => {
@@ -58,7 +58,7 @@ class PostCardSection extends React.Component {
                         postHandler={this.postHandler}
                     />
                 )}
-                <div className="card-deck mx-2 d-flex justify-content-center flex-wrap">
+                <div className="card-deck d-flex justify-content-center flex-wrap">
                     {this.props.posts.map((post) => {
                         return !this.state.categoryFilter ||
                             post.categories.includes(
