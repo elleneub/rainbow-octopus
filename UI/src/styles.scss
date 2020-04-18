@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-family: $sans;
     font-weight: 300;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 code {
@@ -12,7 +12,12 @@ code {
         monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 300;
 }
 // SPINNER
@@ -28,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px;
     font-size: 34px;
     letter-spacing: 1px;
-    text-align: center; 
+    text-align: center;
 }
 // BUTTONS
 
@@ -68,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     display: flex;
     justify-content: center;
-    font-weight:300;
+    font-weight: 300;
 }
 
 .profile-card-container .round {
@@ -103,6 +108,13 @@ button.send-msg {
 ul {
     list-style-type: none;
 }
+
+.history-title {
+    text-align: center;
+    font-family: $serif;
+    margin-bottom: 3px;
+}
+
 // POST CARDS
 
 .card-title {
@@ -208,6 +220,11 @@ ul {
     }
 }
 
+.dropdown-item {
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
 .form-requestoffer {
     border-radius: 5px;
     border: solid 1px $secondary;
@@ -218,12 +235,12 @@ ul {
         border: 1px solid $secondary;
     }
 
-    input, textarea {
-        font-weight:300;
+    input,
+    textarea {
+        font-weight: 300;
         font-size: 14px;
     }
 }
-
 
 .form-check {
     border: 1px solid #dee2e6;

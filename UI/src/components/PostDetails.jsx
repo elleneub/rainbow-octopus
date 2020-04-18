@@ -12,49 +12,47 @@ class PostDetails extends React.Component {
             notes:
                 'I am available in the mornings from 9-10am or evenings from 5-7pm.',
             expiration: 'Monday May 4, 2020',
-            recurring: false,
+            recurring: 'No',
         }
         // Should be switched to use API data
         // this.props.postData
     }
     render() {
         return (
-            <div className="card post-details bg-light shadow-sm m-3 border-primary">
-                <div className="card-body text-inline">
-                    {/* <h5 className="card-title font-weight-bold text-center">
+            // <div className="card post-details bg-light shadow-sm m-3 border-primary">
+            <div className="card-body text-inline">
+                {/* <h5 className="card-title font-weight-bold text-center">
                         Request Details
                     </h5> */}
-                    <h6 className="card-title font-weight-bold text-left">
-                        Person requesting help: {this.state.name}
-                    </h6>
-                    <h6 className="card-title font-weight-bold text-left">
-                        (Request) {this.state.title}
-                    </h6>
-                    <p className="card-subtitle mb-2 text-muted text-left">
-                        Location: {this.state.location}
-                    </p>
-                    <p className="card-text text-left">
-                        {this.state.description}
-                    </p>
-                    <p className="card-text text-left">
-                        <strong>Notes: </strong>
-                        {this.state.notes}
-                    </p>
-                    <p className="card-text text-left">
-                        <strong>Expiration Date: </strong>
-                        {this.state.expiration}
-                    </p>
-                    <p className="card-text text-left">
-                        <strong>Recurring? </strong>
-                        {this.state.recurring}
-                    </p>
-                    <div className="row px-3">
+                <h6 className="card-title font-weight-bold text-left">
+                    {this.state.title}
+                </h6>
+                <h6 className="card-title font-weight-bold text-left">
+                    Person requesting help: {this.state.name}
+                </h6>
+                <p className="card-subtitle mb-2 text-muted text-left">
+                    Location: {this.state.location}
+                </p>
+                <p className="card-text text-left">{this.state.description}</p>
+                <p className="card-text text-left">
+                    <strong>Notes: </strong>
+                    {this.state.notes}
+                </p>
+                <p className="card-text text-left">
+                    <strong>Expiration Date: </strong>
+                    {this.state.expiration}
+                </p>
+                <p className="card-text text-left">
+                    <strong>Recurring? </strong>
+                    {this.state.recurring}
+                </p>
+                {/* <div className="row px-3">
                         <button className="btn-primary btn btn-sm d-flex align-self-end mr-2">
                             Contact Neighbor
                         </button>
-                    </div>
-                </div>
+                    </div> */}
             </div>
+            // </div>
             //
         )
     }
