@@ -21,7 +21,7 @@ class MessagesPage extends React.Component {
     render() {
         return (
             <>
-                <div>
+                <div className="spce">
                     <h1 className="page-title">Messages</h1>
 
                     <div className="container">
