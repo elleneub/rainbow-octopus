@@ -2,11 +2,6 @@
 
 body {
     margin: 0;
-    // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    //     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    //     'Helvetica Neue', sans-serif;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
     font-family: $sans;
     font-weight: 300;
     letter-spacing: .5px;
@@ -17,7 +12,7 @@ code {
         monospace;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 // SPINNER
@@ -61,25 +56,19 @@ h1, h2, h3, h4, h5 {
 
 // PROFILE CARD
 
-.profile-card {
-    background-color: $primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .profile-card-container {
     background-color: $primary;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgb(175, 175, 176);
     color: white;
-    padding-top: 30px;
+    padding-top: 20px;
     // position: relative;  Here in case we want to add badges to top corners
     width: 400px;
     max-width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
+    font-weight:300;
 }
 
 .profile-card-container .round {
@@ -111,34 +100,9 @@ button.send-msg {
     font-size: 30px;
 }
 
-hr {
-    border-color: white;
-    margin: 0;
-}
-
-.skills {
-    background-color: $primary;
-    text-align: left;
-    padding: 5px;
-}
-
-.skills ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.skills ul li {
-    background-color: $success;
-    border: 1px solid $success;
-    border-radius: 3px;
-    display: inline-block;
-    font-size: 13px; // Specify font size?
-    margin: 0 7px 7px 0;
-    padding: 7px;
+ul {
     list-style-type: none;
 }
-
 // POST CARDS
 
 .card-title {
@@ -227,7 +191,7 @@ hr {
     border-radius: 5px;
     border: solid 1px $primary;
     padding: 20px;
-    font-size: 13px;
+    font-size: 14px;
 
     input {
         border: solid 1px $primary;
@@ -248,11 +212,18 @@ hr {
     border-radius: 5px;
     border: solid 1px $secondary;
     padding: 20px;
-    font-size: 13px;
+    font-size: 14px;
 
     .form-input {
         border: 1px solid $secondary;
     }
+
+    input, textarea {
+        font-weight:300;
+        font-size: 14px;
+    }
+}
+
 
 .form-check {
     border: 1px solid #dee2e6;

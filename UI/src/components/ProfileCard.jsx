@@ -11,7 +11,7 @@ import {
 
 class ProfileCard extends React.Component {
     paymentIcons = {
-        PayPay: faCcPaypal,
+        PayPal: faCcPaypal,
         Stripe: faCcStripe,
         Cash: faMoneyBillWave,
     }
@@ -66,7 +66,7 @@ class ProfileCard extends React.Component {
         })
 
         return (
-            <div className="row card-container profile-card-container mx-auto">
+            <div className="row profile-card-container mx-auto">
                 <div className="col">
                     <img className="round" src={data.image} alt="user" />
                     <div className="buttons my-3">
@@ -74,40 +74,38 @@ class ProfileCard extends React.Component {
                             Send {data.first_name} a Message
                         </button>
                     </div>
-                    <div className="col-6">
-                        <h4 className="my-3">
-                            {data.first_name + ' ' + data.last_name}
-                        </h4>
-                        <h6 className="my-3">
-                            {data.addresses[0].city +
-                                ', ' +
-                                data.addresses[0].state}
-                        </h6>
-                        <div className="social-icons">{socialSection}</div>
-                        <div className="payment">
-                            <h6>
-                                I accept:
-                                <ul className="col justify-content-around mt-1">
-                                    {paymentSection}
-                                </ul>
-                            </h6>
-                        </div>
-                    </div>
+                </div>
 
-                    <div className="col">
-                        <hr></hr>
-                        <div className="skills">
-                            <h5 className="text-center m-3">
-                                I Can Help With:
-                            </h5>
-                            <ul>
-                                {data.skills.map((skill) => {
-                                    return <li key={skill}>{skill}</li>
-                                })}
+                <div className="col-6 text-left">
+                    <h3>{data.first_name + ' ' + data.last_name}</h3>
+                    <h5 className="my-3">
+                        {data.addresses[0].city +
+                            ', ' +
+                            data.addresses[0].state}
+                    </h5>
+                    <div className="social-icons">{socialSection}</div>
+
+                    <div className="payment mb-3 text-left">
+                        <h5>
+                            I accept:
+                            <ul className="col justify-content-around mt-1">
+                                {paymentSection}
                             </ul>
-                        </div>
+                        </h5>
                     </div>
                 </div>
+
+                {/* <div className="col">
+                    <hr></hr>
+                    <div className="skills">
+                        <h5 className="text-center m-3">I Can Help With:</h5>
+                        <ul>
+                            {data.skills.map((skill) => {
+                                return <li key={skill}>{skill}</li>
+                            })}
+                        </ul>
+                    </div>
+                </div> */}
             </div>
         )
     }
