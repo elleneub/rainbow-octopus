@@ -11,11 +11,11 @@ class FindHelpPage extends React.Component {
                 categories: ['Light Yard Work'],
                 offerer_uid: 3,
                 notes:
-                    'I have a car and am frequently out and about. I can pick up small items',
+                    'I am happy to help with more difficult yard tasks, and I can assist with household repairs.',
             },
             {
                 id: '1',
-                title: 'Can Help Picking Up Heavy Things',
+                title: 'I can help with heavy lifting/manual labor',
                 location: 'Cedar/Riverside',
                 categories: ['Heavy Yard Work'],
                 offerer_uid: 2,
