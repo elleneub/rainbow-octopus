@@ -1,4 +1,7 @@
 import React from 'react'
+import image1 from 'images/user1.png';
+import image2 from 'images/user2.png';
+import image3 from 'images/user3.png'
 
 class MessagesPage extends React.Component {
     render() {
@@ -15,12 +18,12 @@ class MessagesPage extends React.Component {
                     
                     <div className="media py-2 my-2">
                         <img
-                            src="..."
-                            className="align-self-center mr-3"
+                            src={image1}
+                            className="align-self-center mr-3 ml-2"
                             
                         />
                         <div className="media-body">
-                            <h5 className="mt-0">Neighbor</h5>
+                            <h5 className="mt-0">Victoria Georges</h5>
                             <p className="mb-0">
                                 Aye list pirate parrel hardtack rigging barque
                                 belay barkadeer bucko. Doubloon shrouds weigh
@@ -30,12 +33,12 @@ class MessagesPage extends React.Component {
                     </div>
                     <div className="media media-color py-2 my-2">
                         <img
-                            src="..."
-                            className="align-self-center mr-3"
+                            src={image2}
+                            className="align-self-center mr-3 ml-2"
                             alt="..."
                         />
                         <div className="media-body">
-                            <h5 className="mt-0">Neighbor</h5>
+                            <h5 className="mt-0">Mohammad Saladin</h5>
                             <p className="mb-0">
                                 Lookout grog weigh anchor crack Jennys tea cup
                                 strike colors knave hardtack matey carouser...
@@ -44,12 +47,12 @@ class MessagesPage extends React.Component {
                     </div>
                     <div className="media py-2 my-2">
                         <img
-                            src="..."
-                            className="align-self-center mr-3"
+                            src={image3}
+                            className="align-self-center mr-3 ml-2"
                             alt="..."
                         />
                         <div className="media-body">
-                            <h5 className="mt-0">Neighbor</h5>
+                            <h5 className="mt-0">Laia Caldera</h5>
                             <p className="mb-0">
                                 Hogshead belaying pin crack Jennys tea cup
                                 piracy Nelsons folly jib wench log chase gun...
