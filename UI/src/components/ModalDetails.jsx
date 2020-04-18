@@ -39,14 +39,14 @@ class ModalDetails extends React.Component {
                         >
                             Back to List
                         </Button>
-                        <button className="btn-primary btn btn-sm d-flex align-self-end">
+                        <button className="btn-primary btn d-flex align-self-end">
                             <Link
                                 to={`/account/${
                                     postData.requester_user_id ||
                                     postData.offerer_uid
                                 }`}
                             >
-                                Poster Account
+                                Contact Requester
                             </Link>
                         </button>
                     </Modal.Footer>
