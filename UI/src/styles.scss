@@ -251,9 +251,35 @@ ul {
     font-size: 14px;
 }
 
-
 .form-check-inline {
-        margin-right: 5px;
+    margin-right: 5px;
+}
+
+// MESSAGES
+
+.media {
+    border-radius: 5px;
+    background: #d9d9d9;
+}
+
+.media-color {
+    background-color: rgba(221, 124, 107, 0.432) !important;
+}
+
+.search-bar {
+    display: block;
+    // max-width: 400px;
+    // min-width: 200px;
+    width: 300px;
+    padding: 4px 4px;
+    margin: 20px;
+    border: 1px solid $primary;
+    border-radius: 25px;
+
+        h6 {
+            padding-left: 10px;
+            padding-top: 5px;
+        }
 }
 
 // BANNER
