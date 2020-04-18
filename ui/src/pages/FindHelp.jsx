@@ -19,7 +19,7 @@ class FindHelpPage extends React.Component {
                 location: 'Cedar/Riverside',
                 categories: ['Heavy Yard Work'],
                 offerer_uid: 2,
-                notes: 'I can help with laborous tasks in your home or outside work.',
+                notes: 'I can help with more difficult tasks in your home or outside yard work.',
             },
             {
                 id: '2',

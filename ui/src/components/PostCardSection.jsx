@@ -35,7 +35,7 @@ class PostCardSection extends React.Component {
         this.setState({
             locationFilter: location,
         })
-        alert('Implement filtering on location')
+        // alert('Implement filtering on location')
     }
 
     postHandler = () => {
