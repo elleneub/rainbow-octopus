@@ -31,7 +31,7 @@ class OfferHelpPage extends React.Component {
                 categories: ['Light Yard Work'],
                 requester_user_id: 4,
                 notes:
-                    'I need someone to pick up my groceries because I live alone and have a compromised immune system.',
+                    'I need someone to pick up my groceries; I live alone and have a compromised immune system.',
             },
             {
                 id: '1',
@@ -39,7 +39,7 @@ class OfferHelpPage extends React.Component {
                 location: 'Cedar/Riverside',
                 categories: ['Heavy Yard Work'],
                 requester_user_id: 2,
-                notes: 'I need someone to pick up my heavy thing.',
+                notes: 'I need someone help me move about 20-30 heavy boxes into my attic.',
             },
             {
                 id: '2',
