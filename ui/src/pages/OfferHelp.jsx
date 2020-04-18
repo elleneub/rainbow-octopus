@@ -1,6 +1,8 @@
 import React from 'react';
 import PostCardSection from 'components/PostCardSection';
-import Map from 'components/Map';
+import standin from 'images/standin.png'
+
+// import Map from 'components/Map';
 
 class OfferHelpPage extends React.Component {
 
@@ -53,17 +55,19 @@ class OfferHelpPage extends React.Component {
         ]
 
         return (
-            <>
-            <h1 className="page-title">Offer to Help</h1>
-            <div className="m-3" id="ohcards">
-                <div className="card">
-                    <div className="card-body">
-                        <PostCardSection posts={posts} />
+            <div>
+                <h1 className="page-title">Offer to Help</h1>
+                <div className="m-3" id="ohcards">
+                    <div className="card">
+                        <div className="card-body">
+                            <PostCardSection posts={posts} />
+                        </div>
+                    </div>
+                    <div  className="ohmap">
+                        <img src={standin} alt="..." width="400px"/>                
                     </div>
                 </div>
-                <Map  className="ohmap"/>
-             </div>
-            </>
+            </div>
         )
     }
 }
