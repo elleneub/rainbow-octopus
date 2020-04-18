@@ -1,7 +1,27 @@
-import React from 'react'
-import PostCardSection from 'components/PostCardSection'
+import React from 'react';
+import PostCardSection from 'components/PostCardSection';
+import Map from 'components/Map';
 
 class OfferHelpPage extends React.Component {
+
+    // This is for calling an API related to MapBox -- needs to be on whichever page we render the map
+    // Will take address information from USER and convert to coordinates to be rendered on the map
+    state = {
+        latitude: 39.982,
+        longitude: -82.998
+    };
+
+    async componentDidMount() {
+        const address = "43215";
+        const mapboxAPIKey = "pk.eyJ1Ijoia2F5bGluYml0dG5lciIsImEiOiJjazkxejZ6cG8wMG0zM2tuN3IwaDB4ZzduIn0.HXn_ybie-wXPkHDQldW_Bw";
+        const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${mapboxAPIKey}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+        this.setState({ latitude: data.features[0].geometry.coordinates[0]});
+        this.setState({ longitude: data.features[0].geometry.coordinates[1]});
+    }
+
     render() {
         const posts = [
             {
@@ -35,13 +55,14 @@ class OfferHelpPage extends React.Component {
         return (
             <>
             <h1 className="page-title">Offer to Help</h1>
-            <div className="m-3">
+            <div className="m-3" id="ohcards">
                 <div className="card">
                     <div className="card-body">
                         <PostCardSection posts={posts} />
                     </div>
                 </div>
-                </div>
+                <Map  className="ohmap"/>
+             </div>
             </>
         )
     }
