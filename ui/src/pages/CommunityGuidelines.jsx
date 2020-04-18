@@ -17,7 +17,7 @@ class CommunityGuidelinesPage extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
         )
     }
 }

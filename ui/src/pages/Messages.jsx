@@ -29,8 +29,6 @@ class MessagesPage extends React.Component {
                             <div className="search-bar mx-5">
                                 <h6>Search</h6>
                             </div>
-                        </div>
-
                         <div
                             className="media py-2 my-2"
                             onClick={() => this.setState({ show: true })}
@@ -97,7 +95,7 @@ class MessagesPage extends React.Component {
                         onHide={() => this.setState({ show: false })}
                     >
                         <Modal.Header closeButton>
-                            <Modal.Title>Chat</Modal.Title>
+                            <Modal.Title><h2>Chat</h2></Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <div className="chat mx-2">
@@ -118,10 +116,11 @@ class MessagesPage extends React.Component {
                                     <img className="m-3" src={image2} alt="..."/>
                                 </div>
                             </div>
+                            <div className="space"></div>
                         </Modal.Body>
                         <Modal.Footer>
                             <Form.Control
-                                size="sm"
+                                // size="sm"
                                 type="text"
                                 placeholder="Type a message..."
                             />{' '}

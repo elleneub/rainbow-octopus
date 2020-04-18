@@ -58,25 +58,29 @@ class MyAccountPage extends React.Component {
         return (
             <div>
                 <h1 className="page-title">My Account Page</h1>
-                {this.props.urlParam && this.state.isLoading ? (
-                    <div className="d-flex justify-content-center spinner">
-                        <div className="spinner-border" role="status">
-                            <span className="sr-only">Loading...</span>
+                <div className="mx-2 mt-5">
+                    {this.props.urlParam && this.state.isLoading ? (
+                        <div className="d-flex justify-content-center spinner">
+                            <div className="spinner-border" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </div>
                         </div>
-                    </div>
-                ) : (
-                    <span>
-                        <ProfileCard
-                            userData={
-                                this.state.overrideUserData ||
-                                this.props.userData
-                            }
-                        />
-                        <AccountHistory
-                            userId={this.props.urlParam || this.props.userId}
-                        />
-                    </span>
-                )}
+                    ) : (
+                        <span>
+                            <ProfileCard
+                                userData={
+                                    this.state.overrideUserData ||
+                                    this.props.userData
+                                }
+                            />
+                            <AccountHistory
+                                userId={
+                                    this.props.urlParam || this.props.userId
+                                }
+                            />
+                        </span>
+                    )}
+                </div>
             </div>
         )
     }
