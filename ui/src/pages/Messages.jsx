@@ -17,7 +17,7 @@ class MessagesPage extends React.Component {
                         <img
                             src="..."
                             className="align-self-center mr-3"
-                            alt="..."
+                            
                         />
                         <div className="media-body">
                             <h5 className="mt-0">Neighbor</h5>
