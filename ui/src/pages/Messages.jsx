@@ -40,6 +40,7 @@ class MessagesPage extends React.Component {
                                     <img
                                         src={image1}
                                         className="align-self-center mr-3 ml-2"
+                                        alt="..."
                                     />
                                     <div className="media-body">
                                         <h5 className="mt-0">
@@ -86,6 +87,7 @@ class MessagesPage extends React.Component {
                                     <img
                                         src={image3}
                                         className="align-self-center mr-3 ml-2"
+                                        alt="..."
                                     />
                                     <div className="media-body">
                                         <h5 className="mt-0">Laia Caldera</h5>
