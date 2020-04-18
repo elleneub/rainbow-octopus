@@ -301,8 +301,27 @@ ul {
         width: 200px;
 
         .head {
-            font-size: 40px;
+            font-size: 70px;
+        }
+
+        .tail {
+            opacity: .80;
         }
     }
 }
 
+// MAP
+
+.marker {
+    color: $secondary;
+    height: 20px;
+    width: 20px !important;
+} 	
+
+#ohcards {
+    display: flex;
+
+    .ohmap {
+        margin-left: 16px;
+    }
+}
