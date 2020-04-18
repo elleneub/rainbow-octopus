@@ -33,7 +33,7 @@ class FindHelpPage extends React.Component {
         ]
 
         return (
-            <>
+            <div className="spce">
                 <h1 className="page-title">Find Help</h1>
                 <div className="m-3">
                     <div className="card">
@@ -42,7 +42,7 @@ class FindHelpPage extends React.Component {
                         </div>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 }

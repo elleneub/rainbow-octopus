@@ -10,11 +10,11 @@ class HomePage extends React.Component {
                 <Banner />
                 <div className="card my-2 mx-5">
                     <div className="card-body bg-primary">
-                        <h2 className="card-title">
+                        <p className="subtitle">
                             Ximity is a volunteer community exchange. We provide a
                             platform for vulnerable or at-risk people to post
                             their needs and for helpers to step-up to assist.
-                        </h2>
+                        </p>
                     </div>
                 </div>
                 <div className="card my-2 mx-5">

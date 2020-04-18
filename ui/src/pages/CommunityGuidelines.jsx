@@ -3,8 +3,7 @@ import React from 'react'
 class CommunityGuidelinesPage extends React.Component {
     render() {
         return (
-            <>
-              <div>
+            <div className="spce">
                 <h1 className="page-title">Community Guidelines</h1>
                 <div className="m-3">
                     <div className="card">
@@ -17,7 +16,7 @@ class CommunityGuidelinesPage extends React.Component {
                         </div>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 }
