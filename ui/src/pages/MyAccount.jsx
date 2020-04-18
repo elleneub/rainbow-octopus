@@ -22,7 +22,7 @@ class MyAccountPage extends React.Component {
                 // Fake out a bunch of data that's not yet in the API
                 const randomNum = Math.floor(Math.random() * 99) + 1
                 res.data.image = `https://randomuser.me/api/portraits/women/${randomNum}.jpg`
-                res.data.payment_option = ['PayPay', 'Cash']
+                res.data.payment_option = ['PayPal', 'Cash']
                 res.data.skills = [
                     'Errands',
                     'Transportation',
@@ -57,7 +57,7 @@ class MyAccountPage extends React.Component {
         )
         return (
             <div>
-                <h1 className="ml-5 mt-5">My Account Page</h1>
+                <h1 className="page-title">My Account Page</h1>
                 {this.props.urlParam && this.state.isLoading ? (
                     <div className="d-flex justify-content-center spinner">
                         <div className="spinner-border" role="status">
