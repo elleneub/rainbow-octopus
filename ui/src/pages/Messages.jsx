@@ -30,7 +30,7 @@ class MessagesPage extends React.Component {
                                 <h6>Search</h6>
                             </div>
 
-                            <div className="col-8">
+                            <div className="col-md-8">
                                 <div
                                     className="media py-2 my-2"
                                     onClick={() =>
