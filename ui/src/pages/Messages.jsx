@@ -29,74 +29,61 @@ class MessagesPage extends React.Component {
                             <div className="search-bar mx-5">
                                 <h6>Search</h6>
                             </div>
-
-                            <div className="col-md-8">
-                                <div
-                                    className="media py-2 my-2"
-                                    onClick={() =>
-                                        this.setState({ show: true })
-                                    }
-                                    cursor="pointer"
-                                >
-                                    <img
-                                        src={image1}
-                                        className="align-self-center mr-3 ml-2"
-                                    />
-                                    <div className="media-body">
-                                        <h5 className="mt-0">
-                                            Victoria Georges
-                                        </h5>
-                                        <p className="mb-0">
-                                            Aye list pirate parrel hardtack
-                                            rigging barque belay barkadeer
-                                            bucko. Doubloon shrouds weigh
-                                            anchor...
-                                        </p>
-                                    </div>
-                                </div>
-                                <div
-                                    className="media media-color py-2 my-2"
-                                    onClick={() =>
-                                        this.setState({ show: true })
-                                    }
-                                    cursor="pointer"
-                                >
-                                    <img
-                                        src={image2}
-                                        className="align-self-center mr-3 ml-2"
-                                        alt="..."
-                                    />
-                                    <div className="media-body">
-                                        <h5 className="mt-0">
-                                            Mohammad Saladin
-                                        </h5>
-                                        <p className="mb-0">
-                                            Lookout grog weigh anchor crack
-                                            Jennys tea cup strike colors knave
-                                            hardtack matey carouser...
-                                        </p>
-                                    </div>
-                                </div>
-                                <div
-                                    className="media py-2 my-2"
-                                    onClick={() =>
-                                        this.setState({ show: true })
-                                    }
-                                    cursor="pointer"
-                                >
-                                    <img
-                                        src={image3}
-                                        className="align-self-center mr-3 ml-2"
-                                    />
-                                    <div className="media-body">
-                                        <h5 className="mt-0">Laia Caldera</h5>
-                                        <p className="mb-0">
-                                            Hogshead belaying pin crack Jennys
-                                            tea cup piracy Nelsons folly jib
-                                            wench log chase gun...
-                                        </p>
-                                    </div>
-                                </div>
+                        <div
+                            className="media py-2 my-2"
+                            onClick={() => this.setState({ show: true })}
+                            cursor="pointer"
+                        >
+                            <img
+                                src={image1}
+                                className="align-self-center mr-3 ml-2"
+                                alt="..."
+                            />
+                            <div className="media-body">
+                                <h5 className="mt-0">Victoria Georges</h5>
+                                <p className="mb-0">
+                                    Aye list pirate parrel hardtack rigging
+                                    barque belay barkadeer bucko. Doubloon
+                                    shrouds weigh anchor...
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            className="media media-color py-2 my-2"
+                            onClick={() => this.setState({ show: true })}
+                            cursor="pointer"
+                        >
+                            <img
+                                src={image2}
+                                className="align-self-center mr-3 ml-2"
+                                alt="..."
+                            />
+                            <div className="media-body">
+                                <h5 className="mt-0">Mohammad Saladin</h5>
+                                <p className="mb-0">
+                                    Lookout grog weigh anchor crack Jennys tea
+                                    cup strike colors knave hardtack matey
+                                    carouser...
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            className="media py-2 my-2"
+                            onClick={() => this.setState({ show: true })}
+                            cursor="pointer"
+                        >
+                            <img
+                                src={image3}
+                                className="align-self-center mr-3 ml-2"
+                                alt="..."
+                            />
+                            <div className="media-body">
+                                <h5 className="mt-0">Laia Caldera</h5>
+                                <p className="mb-0">
+                                    Hogshead belaying pin crack Jennys tea cup
+                                    piracy Nelsons folly jib wench log chase
+                                    gun...
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -113,7 +100,7 @@ class MessagesPage extends React.Component {
                         <Modal.Body>
                             <div className="chat mx-2">
                                 <div className="media mr-5 my-3 shadow p-2">
-                                    <img className="m-3" src={image3} />
+                                    <img className="m-3" src={image3} alt="..." />
                                     <div className="media-body">
                                         <h5 className="mt-0">Your Neighbor</h5>
                                         Thanks for replying to my request! Are
@@ -126,7 +113,7 @@ class MessagesPage extends React.Component {
                                         <h5 className="mt-0">Me</h5>
                                         Yeah I can do Saturday!
                                     </div>
-                                    <img className="m-3" src={image2} />
+                                    <img className="m-3" src={image2} alt="..."/>
                                 </div>
                             </div>
                             <div className="space"></div>
