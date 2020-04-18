@@ -11,7 +11,7 @@ class HomePage extends React.Component {
                 <div className="card my-2 mx-5">
                     <div className="card-body bg-primary">
                         <h2 className="card-title">
-                            Ximity is volunteer community exchange. We provide a
+                            Ximity is a volunteer community exchange. We provide a
                             platform for vulnerable or at-risk people to post
                             their needs and for helpers to step-up to assist.
                         </h2>
@@ -39,7 +39,7 @@ class HomePage extends React.Component {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-12 col-md-4 d-flex">
+                            <div className="col-12 col-md-4 d-flex" id ="hpbutton">
                                 <button className="btn btn-secondary ml-auto ml-auto">
                                     I Want To Help
                                 </button>
@@ -65,7 +65,7 @@ class HomePage extends React.Component {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-12 col-md-4 d-flex">
+                            <div className="col-12 col-md-4 d-flex" id ="hpbutton">
                                 <button className="btn btn-secondary ml-auto">
                                     I Need Help
                                 </button>

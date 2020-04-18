@@ -27,10 +27,10 @@ h5 {
 }
 
 .page-title {
-    width: 100%;
-    background: $success;
-    font-family: $serif;
-    color: white;
+    // width: 100%;
+    // background: $success;
+    // font-family: $serif;
+    // color: white;
     padding: 5px;
     font-size: 34px;
     letter-spacing: 1px;
@@ -244,7 +244,7 @@ ul {
         margin-right: 5px;
 }
 
-// BANNER
+// BANNER & HOMEPAGE
 
 .banner {
     color: white;
@@ -270,6 +270,15 @@ ul {
             opacity: .80;
         }
     }
+}
+
+#hpbutton {
+    align-items: flex-end;
+
+    .btn {
+        height: 40px;
+    }
+
 }
 
 // MAP
