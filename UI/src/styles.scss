@@ -28,7 +28,7 @@ h5 {
 .page-title {
     width: 100%;
     background: $success;
-    font-family: $serif;
+    font-family: $sans;
     color: white;
     padding: 5px;
     font-size: 34px;
@@ -177,6 +177,10 @@ ul {
 
 @media (max-width: 960px) {
     /* For a screen < 960px, this CSS will be read */
+    #ohcards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 720px) {
@@ -282,7 +286,7 @@ ul {
         }
 }
 
-// BANNER
+// BANNER & HOMEPAGE
 
 .banner {
     color: white;
@@ -308,6 +312,15 @@ ul {
             opacity: .80;
         }
     }
+}
+
+#hpbutton {
+    align-items: flex-end;
+
+    .btn {
+        height: 40px;
+    }
+
 }
 
 

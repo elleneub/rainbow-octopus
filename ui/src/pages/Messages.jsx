@@ -39,6 +39,7 @@ class MessagesPage extends React.Component {
                             <img
                                 src={image1}
                                 className="align-self-center mr-3 ml-2"
+                                alt="..."
                             />
                             <div className="media-body">
                                 <h5 className="mt-0">Victoria Georges</h5>
@@ -76,6 +77,7 @@ class MessagesPage extends React.Component {
                             <img
                                 src={image3}
                                 className="align-self-center mr-3 ml-2"
+                                alt="..."
                             />
                             <div className="media-body">
                                 <h5 className="mt-0">Laia Caldera</h5>
@@ -100,7 +102,7 @@ class MessagesPage extends React.Component {
                         <Modal.Body>
                             <div className="chat mx-2">
                                 <div className="media mr-5 my-3 shadow p-2">
-                                    <img className="m-3" src={image3} />
+                                    <img className="m-3" src={image3} alt="..." />
                                     <div className="media-body">
                                         <h5 className="mt-0">Your Neighbor</h5>
                                         Thanks for replying to my request! Are
@@ -113,7 +115,7 @@ class MessagesPage extends React.Component {
                                         <h5 className="mt-0">Me</h5>
                                         Yeah I can do Saturday!
                                     </div>
-                                    <img className="m-3" src={image2} />
+                                    <img className="m-3" src={image2} alt="..."/>
                                 </div>
                             </div>
                         </Modal.Body>
