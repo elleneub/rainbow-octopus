@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
 
 
-export default function Map(state) {
-    state = {
+export default function Map(props) {
+    props = {
         latitude: 39.97,
         longitude: -83
     };
     const [viewport, setViewport] = useState ({
-        latitude: state.latitude,
-        longitude: state.longitude,
+        latitude: props.latitude,
+        longitude: props.longitude,
         width: "400px",
         height: "400px",
         zoom: 10
@@ -30,8 +30,8 @@ export default function Map(state) {
 
             {/* We can render different icons on the map to indicate the category of service/request */}
                 <Marker
-                    latitude={state.latitude}
-                    longitude={state.longitude}
+                    latitude={props.latitude}
+                    longitude={props.longitude}
                 >
                     <FontAwesomeIcon icon={faMapMarker} className="marker" />
                 </Marker>
