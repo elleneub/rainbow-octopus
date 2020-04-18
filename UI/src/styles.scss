@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-family: $sans;
     font-weight: 300;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 code {
@@ -12,7 +12,13 @@ code {
         monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
     font-weight: 300;
 }
 // SPINNER
@@ -28,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px;
     font-size: 34px;
     letter-spacing: 1px;
-    text-align: center; 
+    text-align: center;
 }
 // BUTTONS
 
@@ -233,6 +239,8 @@ ul {
     font-size: 14px;
 }
 
+
 .form-check-inline {
-    margin-right: 5px;
+        margin-right: 5px;
 }
+
