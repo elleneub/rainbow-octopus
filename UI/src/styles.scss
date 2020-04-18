@@ -252,7 +252,6 @@ ul {
     background-color: rgba(221, 124, 107, 0.432) !important;
 }
 
-
 .search-bar {
     display: block;
     // max-width: 400px;
@@ -268,3 +267,28 @@ ul {
             padding-top: 5px;
         }
 }
+
+// BANNER
+
+.banner {
+    color: white;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1521566652839-697aa473761a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80');
+    background-position: center;
+    
+
+    .group {
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 200px;
+
+        .head {
+            font-size: 40px;
+        }
+    }
+}
+

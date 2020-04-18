@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Banner from 'components/Banner';
+
+
 
 class HomePage extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                    <h1 className="mx-auto bg-secondary px-5 py-5">Ximity</h1>
-                </div>
+                <Banner />
                 <div className="card my-2 mx-5">
                     <div className="card-body bg-primary">
                         <h2 className="card-title">
