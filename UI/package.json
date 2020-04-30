@@ -14,7 +14,7 @@
         "axios": "^0.19.2",
         "bootstrap": "^4.4.1",
         "css-loader": "^3.5.2",
-        "jquery": "3.4.1",
+        "jquery": "3.5.0",
         "mapbox-gl": "^1.9.1",
         "node-sass": "^4.13.1",
         "popper.js": "^1.16.1",
